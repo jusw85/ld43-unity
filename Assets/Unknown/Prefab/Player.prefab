@@ -271,7 +271,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074065249609518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.08, y: 2.44, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4942140205637396}
@@ -527,13 +527,13 @@ MonoBehaviour:
   buildingBlock: {fileID: 1644130115086514, guid: 98b32f450fd1f2246aa1809744224bd1,
     type: 2}
   telePoint: {fileID: 4942140205637396}
-  teleBlock: {fileID: 103856, guid: 1595b875d4b1a834eae08b88881a6058, type: 2}
+  teleBlock: {fileID: 0}
   buildDelay: 2
   boundDelay: 0
   firePoint: {fileID: 4074720881938634}
   bullet: {fileID: 1000011601934616, guid: f60cefb0bca842b409255da6b2a3d077, type: 2}
   firePoint_red: {fileID: 4438878241502972}
-  bullet_red: {fileID: 1000012444999696, guid: 58e844d77ab02fa4c844b1466609e543, type: 2}
+  bullet_red: {fileID: 0}
   knockback: 0
   knockbackLength: 0.1
   knockbackCount: 0
@@ -555,7 +555,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   dashBulletPoint: {fileID: 4834571014366150}
-  dashBullet: {fileID: 1051122853842480, guid: 2ff1fd4d127b4b54c911f06ed29624bb, type: 2}
+  dashBullet: {fileID: 0}
   boundPoint: {fileID: 4778918820289828}
   phantomBound: {fileID: 1751801033355066, guid: 7d1480d51623eb34689eb1a5f3cd4af3,
     type: 2}
