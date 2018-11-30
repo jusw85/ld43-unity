@@ -1,0 +1,289 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1953426993716330}
+  m_IsPrefabParent: 1
+--- !u!1 &1449182159353772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4743294121058860}
+  m_Layer: 0
+  m_Name: SpawnEnemyPoint 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &1825618774027118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4709327068732920}
+  m_Layer: 0
+  m_Name: SpawnEnemyPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &1953426993716330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4267880616530708}
+  - component: {fileID: 114195238065768914}
+  - component: {fileID: 114324108395619170}
+  - component: {fileID: 114316647207640362}
+  - component: {fileID: 82786656396006384}
+  - component: {fileID: 114364556341871676}
+  m_Layer: 0
+  m_Name: Level Manager 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4267880616530708
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953426993716330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4709327068732920}
+  - {fileID: 4743294121058860}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4709327068732920
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1825618774027118}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.02, y: -1.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4267880616530708}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4743294121058860
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1449182159353772}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.84, y: -1.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4267880616530708}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &82786656396006384
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953426993716330}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 16d602d574bedf8489b47f8c534e6de2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.52
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &114195238065768914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953426993716330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09872fcba28bff64198bd99f97dd581d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCheckpoint: {fileID: 0}
+  deathParticle: {fileID: 157816, guid: 95c324fe68f3b3847b4c103e13dff23f, type: 2}
+  respawnParticle: {fileID: 134648, guid: 364a21b9dbf54e743b0602c1bbceebac, type: 2}
+  pointPenaltyOnDeath: 50
+  respawnDelay: 3
+  healthManager: {fileID: 0}
+--- !u!114 &114316647207640362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953426993716330}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cee18fbbb63c545a7d58850f550204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgrounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  smoothing: 1
+--- !u!114 &114324108395619170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953426993716330}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60d8a9e675f9924aa9a922509405239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: Wave 1
+    enemy: {fileID: 476760, guid: 54e0dd1cca0c19a45812b1bea4c5f03a, type: 2}
+    count: 2
+    rate: 1
+  - name: Wave 2
+    enemy: {fileID: 476760, guid: 54e0dd1cca0c19a45812b1bea4c5f03a, type: 2}
+    count: 3
+    rate: 1.5
+  spawnPoints:
+  - {fileID: 4709327068732920}
+  - {fileID: 4743294121058860}
+  timeBetweenWaves: 1
+--- !u!114 &114364556341871676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953426993716330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 357c8488c11ef3741bb2618c516f8255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Respawn
+    clip: {fileID: 8300000, guid: 2c11de1bc62d9654ca9d8f6fd7e330b4, type: 3}
+    volume: 0.29
+    pitch: 1.01
+    randomVolume: 0
+    randomPitch: 0
+  - name: Firing
+    clip: {fileID: 8300000, guid: 6606dc8de05fa6848bd5c57b8d042143, type: 3}
+    volume: 0.29
+    pitch: 1.01
+    randomVolume: 0
+    randomPitch: 0
+  - name: deathBlockSpawn
+    clip: {fileID: 8300000, guid: c3b5cc2e5e63c2d4bbc6f66b8ddde8f2, type: 3}
+    volume: 0.29
+    pitch: 1.01
+    randomVolume: 0
+    randomPitch: 0
+  - name: Jump
+    clip: {fileID: 8300000, guid: 407cac4d138e3084083bb9f8957b4105, type: 3}
+    volume: 0.11
+    pitch: 0.74
+    randomVolume: 0.033
+    randomPitch: 0
+  - name: Powerup
+    clip: {fileID: 8300000, guid: 171cd99dfc1e9cb45b3e0e517513fd3c, type: 3}
+    volume: 0.1
+    pitch: 1.01
+    randomVolume: 0
+    randomPitch: 0
+  - name: PlayerHurt
+    clip: {fileID: 8300000, guid: f4912d6cbd7e81b48997ed4e9f15a55b, type: 3}
+    volume: 0.12
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0

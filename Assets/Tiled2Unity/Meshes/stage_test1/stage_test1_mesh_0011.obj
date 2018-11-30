@@ -1,0 +1,34 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'stage_test1_mesh_0011.obj'
+
+# Vertices (Count = 12)
+v -672 -256 0
+v -704 -256 0
+v -704 -224 0
+v -672 -224 0
+v -768 -256 0
+v -800 -256 0
+v -800 -224 0
+v -768 -224 0
+v -704 -288 0
+v -736 -288 0
+v -736 -256 0
+v -704 -256 0
+
+# Texture cooridinates (Count = 4)
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g stage_test1_mesh_0011
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+f 5/1/1 6/2/1 7/3/1 8/4/1
+f 9/1/1 10/2/1 11/3/1 12/4/1
+
