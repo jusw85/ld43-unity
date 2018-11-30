@@ -177,7 +177,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 3
   deathEffect: {fileID: 157816, guid: 95c324fe68f3b3847b4c103e13dff23f, type: 2}
-  deathTree: {fileID: 1000011416914626, guid: b987f2ce1d616f14e8a4e53f6c725099, type: 2}
   pointsOnDeath: 500
   EnemyBlue_3: {fileID: 21300000, guid: afdfdf2ccd90b5f47bef32c0a023a546, type: 3}
   EnemyBlue_2: {fileID: 21300000, guid: 97ebcadf1cb2c1d4c8ed235d3bea6be9, type: 3}

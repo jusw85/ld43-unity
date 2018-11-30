@@ -2,58 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Bullet_Omni : MonoBehaviour 
+public class Enemy_Bullet_Omni : MonoBehaviour
 {
+    public float speed;
 
-	public float speed;
+    public PlayerController player;
 
-	public PlayerController player;
+    public GameObject impactEffect;
 
-	public GameObject impactEffect;
+    public float rotationSpeed;
 
-	public float rotationSpeed;
+    public int damageToGive;
 
-	public int damageToGive;
+    private Rigidbody2D myrigidbody2D;
 
-	private Rigidbody2D myrigidbody2D;
-
-	public HealthManager healthManager;
+    public HealthManager healthManager;
 
 
-	void Start ()
-	{
+    void Start()
+    {
+        player = FindObjectOfType<PlayerController>();
 
-		player = FindObjectOfType<PlayerController> ();
+        myrigidbody2D = GetComponent<Rigidbody2D>();
 
-		myrigidbody2D = GetComponent<Rigidbody2D> ();
+        healthManager = FindObjectOfType<HealthManager>();
 
-		healthManager = FindObjectOfType<HealthManager>();
+        //if (player.transform.position.x < transform.position.x) 
+        //{
+        //speed = -speed;
+        //rotationSpeed = -rotationSpeed;
+        //}
+    }
 
-		//if (player.transform.position.x < transform.position.x) 
-		//{
-			//speed = -speed;
-			//rotationSpeed = -rotationSpeed;
-		//}
-	}
+    void Update()
+    {
+        //myrigidbody2D.velocity = new Vector2 (speed, myrigidbody2D.velocity.y);
 
-	void Update ()
-	{
-		//myrigidbody2D.velocity = new Vector2 (speed, myrigidbody2D.velocity.y);
-	
-		//myrigidbody2D.angularVelocity = rotationSpeed;
+        //myrigidbody2D.angularVelocity = rotationSpeed;
+    }
 
-	}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player_blue")
+        {
+            Debug.Log("Player Hit");
+            healthManager.HurtPlayer(damageToGive);
+        }
 
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.tag == "Player_blue") 
-		{
-			Debug.Log ("Player Hit");
-			healthManager.HurtPlayer (damageToGive);
-
-		}
-
-		Instantiate (impactEffect, transform.position, transform.rotation);
-		Destroy (gameObject);
-	}
+        Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
 }

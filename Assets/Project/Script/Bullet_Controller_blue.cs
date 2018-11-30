@@ -1,85 +1,84 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bullet_Controller_blue : MonoBehaviour 
+public class Bullet_Controller_blue : MonoBehaviour
 {
+    public float speed;
+    public PlayerController player;
+    public GameObject enemyDeathEffect;
+    public GameObject impactEffect;
+    public int pointsForKill;
+    public float rotationSpeed;
+    public int damageToGive;
 
-	public float speed;
-	public PlayerController player;
-	public GameObject enemyDeathEffect;
-	public GameObject impactEffect;
-	public int pointsForKill;
-	public float rotationSpeed;
-	public int damageToGive;
+    private Sprite defaultSprite;
+    public Sprite muzzleFlash;
 
-	private Sprite defaultSprite;
-	public Sprite muzzleFlash;
+    public int framesToFlash = 3;
+    public float destroyTime = 3;
 
-	public int framesToFlash = 3;
-	public float destroyTime = 3;
+    private SpriteRenderer spriteRend;
 
-	private SpriteRenderer spriteRend;
+    // Use this for initialization
+    void Start()
+    {
+        spriteRend = GetComponent<SpriteRenderer>();
+        defaultSprite = spriteRend.sprite;
 
-	// Use this for initialization
-	void Start() 
-	{
-		spriteRend = GetComponent<SpriteRenderer> ();
-		defaultSprite = spriteRend.sprite;
+        StartCoroutine(FlashMuzzleFlash());
+        StartCoroutine(TimedDestruction());
 
-		StartCoroutine (FlashMuzzleFlash ());
-		StartCoroutine (TimedDestruction ());
+        player = FindObjectOfType<PlayerController>();
 
-		player = FindObjectOfType<PlayerController> ();
+        if (player.transform.localScale.x < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+            speed = -speed;
+            rotationSpeed = -rotationSpeed;
+        }
 
-		if (player.transform.localScale.x < 0) 
-		{
-			GetComponent<SpriteRenderer> ().flipX = true;
-			speed = -speed;
-			rotationSpeed = -rotationSpeed;
-		}
+        else
+            GetComponent<SpriteRenderer>().flipX = false;
+    }
 
-		else
-			GetComponent<SpriteRenderer> ().flipX = false;
-	}
+    // Update is called once per frame
+    void Update()
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
 
-	// Update is called once per frame
-	void Update() 
-	{
-		GetComponent<Rigidbody2D>().velocity = new Vector2 (speed, GetComponent<Rigidbody2D>().velocity.y);
+        GetComponent<Rigidbody2D>().angularVelocity = rotationSpeed;
+    }
 
-		GetComponent<Rigidbody2D> ().angularVelocity = rotationSpeed;
-	}
-	void OnTriggerEnter2D(Collider2D other) 
-	{
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy_blue")
+        {
+            other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
+        }
 
-		if (other.tag == "Enemy_blue") 
-		{
-			other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
-		}
+        if (other.tag == "Destructable_blue")
+        {
+            other.GetComponent<Destroy_Block>().giveDamage(damageToGive);
+        }
 
-		if (other.tag == "Destructable_blue") 
-		{
-			other.GetComponent<Destroy_Block>().giveDamage(damageToGive);
-		}
-			
-		Instantiate(impactEffect, transform.position, transform.rotation);
-		Destroy(gameObject);
-	}
+        Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
 
-	IEnumerator FlashMuzzleFlash()
-	{
-		spriteRend.sprite = muzzleFlash;
-		for (int i = 0; i < framesToFlash; i++) 
-		{
-			yield return 0;
-		}
+    IEnumerator FlashMuzzleFlash()
+    {
+        spriteRend.sprite = muzzleFlash;
+        for (int i = 0; i < framesToFlash; i++)
+        {
+            yield return 0;
+        }
 
-		spriteRend.sprite = defaultSprite;
-	}
+        spriteRend.sprite = defaultSprite;
+    }
 
-	IEnumerator TimedDestruction()
-	{
-		yield return new WaitForSeconds (destroyTime);
-		Destroy (gameObject);
-	}
+    IEnumerator TimedDestruction()
+    {
+        yield return new WaitForSeconds(destroyTime);
+        Destroy(gameObject);
+    }
 }

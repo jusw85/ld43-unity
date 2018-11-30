@@ -1,50 +1,47 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyBulletForward_Blue : MonoBehaviour 
+public class EnemyBulletForward_Blue : MonoBehaviour
 {
+    public float speed = 1.0f;
+    public PlayerController player;
 
-	public float speed = 1.0f;
-	public PlayerController player;
+    public GameObject impactEffect;
 
-	public GameObject impactEffect;
+    public int damageToGive;
 
-	public int damageToGive;
+    private Rigidbody2D myrigidbody2D;
 
-	private Rigidbody2D myrigidbody2D;
-
-	public HealthManager healthManager;
+    public HealthManager healthManager;
 
 
-	// Use this for initialization
-	void Start () 
-	{
-		//player = FindObjectOfType<PlayerController> ();
+    // Use this for initialization
+    void Start()
+    {
+        //player = FindObjectOfType<PlayerController> ();
 
-		myrigidbody2D = GetComponent<Rigidbody2D> ();
+        myrigidbody2D = GetComponent<Rigidbody2D>();
 
-		healthManager = FindObjectOfType<HealthManager>();
+        healthManager = FindObjectOfType<HealthManager>();
+    }
 
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		//transform.position += transform.forward * speed * Time.deltaTime;
+    // Update is called once per frame
+    void Update()
+    {
+        //transform.position += transform.forward * speed * Time.deltaTime;
 
-		myrigidbody2D.velocity = new Vector2 (speed, myrigidbody2D.velocity.y);
-	
-	}
+        myrigidbody2D.velocity = new Vector2(speed, myrigidbody2D.velocity.y);
+    }
 
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.tag == "Player_red") 
-		{
-			Debug.Log ("Player Hit");
-			healthManager.HurtPlayer(damageToGive);
-		}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player_red")
+        {
+            Debug.Log("Player Hit");
+            healthManager.HurtPlayer(damageToGive);
+        }
 
-		Instantiate (impactEffect, transform.position, transform.rotation);
-		Destroy (gameObject);
-	}
+        Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
 }

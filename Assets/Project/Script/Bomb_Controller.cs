@@ -2,86 +2,85 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bomb_Controller : MonoBehaviour 
+public class Bomb_Controller : MonoBehaviour
 {
+    //public float speed;
+    public PlayerController player;
+    public GameObject enemyDeathEffect;
+    public GameObject impactEffect;
 
-	//public float speed;
-	public PlayerController player;
-	public GameObject enemyDeathEffect;
-	public GameObject impactEffect;
-	public int pointsForKill;
-	//public float rotationSpeed;
-	public int damageToGive;
+    public int pointsForKill;
 
-	private Sprite defaultSprite;
-	public Sprite muzzleFlash;
+    //public float rotationSpeed;
+    public int damageToGive;
 
-	public int framesToFlash = 3;
-	public float destroyTime = 3;
+    private Sprite defaultSprite;
+    public Sprite muzzleFlash;
 
-	private SpriteRenderer spriteRend;
+    public int framesToFlash = 3;
+    public float destroyTime = 3;
 
-	// Use this for initialization
-	void Start() 
-	{
-		spriteRend = GetComponent<SpriteRenderer> ();
-		defaultSprite = spriteRend.sprite;
+    private SpriteRenderer spriteRend;
 
-		StartCoroutine (FlashMuzzleFlash ());
-		StartCoroutine (TimedDestruction ());
+    // Use this for initialization
+    void Start()
+    {
+        spriteRend = GetComponent<SpriteRenderer>();
+        defaultSprite = spriteRend.sprite;
 
-		player = FindObjectOfType<PlayerController> ();
+        StartCoroutine(FlashMuzzleFlash());
+        StartCoroutine(TimedDestruction());
 
-		//if (player.transform.localScale.x < 0) 
-		//{
-			//GetComponent<SpriteRenderer> ().flipX = true;
-			//speed = -speed;
-			//rotationSpeed = -rotationSpeed;
-		//}
+        player = FindObjectOfType<PlayerController>();
 
-		//else
-			//GetComponent<SpriteRenderer> ().flipX = false;
-	}
+        //if (player.transform.localScale.x < 0) 
+        //{
+        //GetComponent<SpriteRenderer> ().flipX = true;
+        //speed = -speed;
+        //rotationSpeed = -rotationSpeed;
+        //}
 
-	// Update is called once per frame
-	void Update() 
-	{
-		//GetComponent<Rigidbody2D>().velocity = new Vector2 (speed, GetComponent<Rigidbody2D>().velocity.y);
+        //else
+        //GetComponent<SpriteRenderer> ().flipX = false;
+    }
 
-		//GetComponent<Rigidbody2D> ().angularVelocity = rotationSpeed;
-	}
-	void OnTriggerEnter2D(Collider2D other) 
-	{
+    // Update is called once per frame
+    void Update()
+    {
+        //GetComponent<Rigidbody2D>().velocity = new Vector2 (speed, GetComponent<Rigidbody2D>().velocity.y);
 
-		if (other.tag == "Enemy_blue") 
-		{
+        //GetComponent<Rigidbody2D> ().angularVelocity = rotationSpeed;
+    }
 
-			other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
-			other.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, 1), ForceMode2D.Impulse);
-		}
-			
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy_blue")
+        {
+            other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
+            other.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1), ForceMode2D.Impulse);
+        }
 
-		if (other.tag == "Destructable_blue") 
-		{
-			other.GetComponent<Destroy_Block>().giveDamage(damageToGive);
-		}
-			
-	}
 
-	IEnumerator FlashMuzzleFlash()
-	{
-		spriteRend.sprite = muzzleFlash;
-		for (int i = 0; i < framesToFlash; i++) 
-		{
-			yield return 0;
-		}
+        if (other.tag == "Destructable_blue")
+        {
+            other.GetComponent<Destroy_Block>().giveDamage(damageToGive);
+        }
+    }
 
-		spriteRend.sprite = defaultSprite;
-	}
+    IEnumerator FlashMuzzleFlash()
+    {
+        spriteRend.sprite = muzzleFlash;
+        for (int i = 0; i < framesToFlash; i++)
+        {
+            yield return 0;
+        }
 
-	IEnumerator TimedDestruction()
-	{
-		yield return new WaitForSeconds (destroyTime);
-		Destroy (gameObject);
-	}
+        spriteRend.sprite = defaultSprite;
+    }
+
+    IEnumerator TimedDestruction()
+    {
+        yield return new WaitForSeconds(destroyTime);
+        Destroy(gameObject);
+    }
 }

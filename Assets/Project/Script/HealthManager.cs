@@ -2,113 +2,110 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class HealthManager : MonoBehaviour 
+public class HealthManager : MonoBehaviour
 {
+    public int maxPlayerHealth;
 
-	public int maxPlayerHealth;
+    public static int playerHealth;
 
-	public static int playerHealth;
+    public bool isDead;
 
-	public bool isDead;
+    public float invulnerabilityTimer;
 
-	public float invulnerabilityTimer;
+    public bool invulnerable = false;
 
-	public bool invulnerable = false;
+    public PlayerController player;
 
-	public PlayerController player;
+    Text text;
 
-	Text text;
+    //public Slider healthBar;
 
-	//public Slider healthBar;
+    private LevelManager levelManager;
 
-	private LevelManager levelManager;
+    private LifeManager lifeSystem;
 
-	private LifeManager lifeSystem;
+    //cache
+    private AudioManager audioManager;
 
-	//cache
-	private AudioManager audioManager;
+    // Use this for initialization
+    void Start()
+    {
+        text = GetComponent<Text>();
+        //healthBar = GetComponent<Slider>();
 
-	// Use this for initialization
-	void Start () 
-	{
+        playerHealth = maxPlayerHealth;
 
-		text = GetComponent<Text> ();
-		//healthBar = GetComponent<Slider>();
+        levelManager = FindObjectOfType<LevelManager>();
 
-		playerHealth = maxPlayerHealth;
+        lifeSystem = FindObjectOfType<LifeManager>();
 
-		levelManager = FindObjectOfType<LevelManager> ();
+        player = FindObjectOfType<PlayerController>();
 
-		lifeSystem = FindObjectOfType<LifeManager> ();
+        isDead = false;
 
-		player = FindObjectOfType<PlayerController> ();
+        //caching
+        audioManager = AudioManager.instance;
+        if (audioManager == null)
+        {
+            Debug.LogError("No audio Manager found");
+        }
+    }
 
-		isDead = false;
+    // Update is called once per frame
+    void Update()
+    {
+        if (playerHealth <= 0 && !isDead)
+        {
+            playerHealth = 0;
+            levelManager.RespawnPlayer();
+            lifeSystem.TakeLife();
+            isDead = true;
+        }
 
-		//caching
-		audioManager = AudioManager.instance;
-		if (audioManager == null) 
-		{
-			Debug.LogError ("No audio Manager found");
-		}
-	
-	}
+        if (playerHealth > maxPlayerHealth)
+            playerHealth = maxPlayerHealth;
 
-	// Update is called once per frame
-	void Update () 
-	{
-	
-		if (playerHealth <= 0 && !isDead) 
-		{
-			playerHealth = 0;
-			levelManager.RespawnPlayer ();
-			lifeSystem.TakeLife ();
-			isDead = true;
-		}
+        text.text = "" + playerHealth;
+        //healthBar.value = playerHealth;
 
-		if (playerHealth > maxPlayerHealth)
-			playerHealth = maxPlayerHealth;
+        if (invulnerabilityTimer <= 0)
+        {
+            invulnerable = false;
+        }
+        else
+        {
+            //invulnerable = true;
+            Debug.Log("player is invulnerable");
+            invulnerabilityTimer -= Time.deltaTime;
+        }
+    }
 
-		text.text = "" + playerHealth;
-		//healthBar.value = playerHealth;
+    //private IEnumerator IndicateInvulnerable()
+    //{
+    //while (invulnerable = true) 
+    //{
+    //player.GetComponent<SpriteRenderer> ().enabled = false;
+    //yield return new WaitForSeconds (.1f);
+    //player.GetComponent<SpriteRenderer> ().enabled = true;
+    //yield return new WaitForSeconds (.1f);
+    //}
+    //}
 
-		if (invulnerabilityTimer <= 0) 
-		{
-			invulnerable = false;
-		} 
-		else 
-		{
-			//invulnerable = true;
-			Debug.Log ("player is invulnerable");
-			invulnerabilityTimer -= Time.deltaTime;
-		}
-	}
+    public void HurtPlayer(int damageToGive)
+    {
+        if (!invulnerable)
+        {
+            playerHealth -= damageToGive;
+            invulnerable = true;
+            player.GetComponent<Animation>().Play("Player_Flash_blue");
+            audioManager.PlaySound("PlayerHurt");
+            //StartCoroutine (IndicateInvulnerable ());
+            invulnerabilityTimer += 2.0f;
+        }
+    }
 
-	//private IEnumerator IndicateInvulnerable()
-	//{
-		//while (invulnerable = true) 
-		//{
-			//player.GetComponent<SpriteRenderer> ().enabled = false;
-			//yield return new WaitForSeconds (.1f);
-			//player.GetComponent<SpriteRenderer> ().enabled = true;
-			//yield return new WaitForSeconds (.1f);
-		//}
-	//}
-
-	public void HurtPlayer(int damageToGive)
-	{
-		if (!invulnerable) 
-		{
-			playerHealth -= damageToGive;
-			invulnerable = true;
-			player.GetComponent<Animation> ().Play ("Player_Flash_blue");
-			audioManager.PlaySound ("PlayerHurt");
-			//StartCoroutine (IndicateInvulnerable ());
-			invulnerabilityTimer += 2.0f;
-		}
-	}
-	public void FullHealth()
-	{
-		playerHealth = maxPlayerHealth;
-	}
+    public void FullHealth()
+    {
+        playerHealth = maxPlayerHealth;
+    }
 }

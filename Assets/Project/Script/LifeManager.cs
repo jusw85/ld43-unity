@@ -2,63 +2,61 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class LifeManager : MonoBehaviour 
+public class LifeManager : MonoBehaviour
 {
+    public int startingLives;
+    private int lifeCounter;
 
-	public int startingLives;
-	private int lifeCounter;
+    private Text theText;
 
-	private Text theText;
+    public GameObject gameOverScreen;
 
-	public GameObject gameOverScreen;
+    public PlayerController player;
 
-	public PlayerController player;
+    public string mainMenu;
 
-	public string mainMenu;
+    public float waitAfterGameOver;
 
-	public float waitAfterGameOver;
+    // Use this for initialization
+    void Start()
+    {
+        theText = GetComponent<Text>();
 
-	// Use this for initialization
-	void Start () 
-	{
-		theText = GetComponent<Text>();
+        lifeCounter = startingLives;
 
-		lifeCounter = startingLives;
+        player = FindObjectOfType<PlayerController>();
+    }
 
-		player = FindObjectOfType<PlayerController> ();
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		if (lifeCounter < 0) 
-		{
-			gameOverScreen.SetActive (true);
-			player.gameObject.SetActive (false);
-			Debug.Log("Game over");
-		}
+    // Update is called once per frame
+    void Update()
+    {
+        if (lifeCounter < 0)
+        {
+            gameOverScreen.SetActive(true);
+            player.gameObject.SetActive(false);
+            Debug.Log("Game over");
+        }
 
-		theText.text = "x" + lifeCounter;
+        theText.text = "x" + lifeCounter;
 
-		if (gameOverScreen.activeSelf) 
-		{
-			waitAfterGameOver -= Time.deltaTime;
-		}
+        if (gameOverScreen.activeSelf)
+        {
+            waitAfterGameOver -= Time.deltaTime;
+        }
 
-		if (waitAfterGameOver < 0) 
-		{
-			Application.LoadLevel (mainMenu);
-		}
-	
-	}
+        if (waitAfterGameOver < 0)
+        {
+            Application.LoadLevel(mainMenu);
+        }
+    }
 
-	public void GiveLife()
-	{
-		lifeCounter++;
-	}
+    public void GiveLife()
+    {
+        lifeCounter++;
+    }
 
-	public void TakeLife()
-	{
-		lifeCounter--;
-	}
+    public void TakeLife()
+    {
+        lifeCounter--;
+    }
 }
