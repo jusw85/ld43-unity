@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Player Stuff")]
     public float moveSpeed;
+
     public float jumpHeight;
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -16,31 +16,29 @@ public class PlayerController : MonoBehaviour
 
     [Header("Firing Stuff")]
     public GameObject bullet;
-    public Transform firePoint;
 
-    [Header("Dashing Stuff")] public Transform dashCheck;
+    public Transform firePoint;
+    public float fireCooldown = 0.5f;
+
+    [Header("Dashing Stuff")]
+    public Transform dashCheck;
+
     public float dashCheckRadius;
     public float dashCooldown = 2.0f;
 
     private Vector2 moveInput;
-    private bool toJump = false;
-    private bool isGrounded = false;
-    private bool canDoubleJump = false;
+    private bool toJump;
+    private bool isGrounded;
+    private bool canDoubleJump;
     private bool isFacingRight = true;
-    private bool isDashWallBlocked = false;
-    private bool isDashOnCooldown = false;
+    private bool isFireOnCooldown;
+    private bool isDashWallBlocked;
+    private bool isDashOnCooldown;
 
     private Animator anim;
     private Rigidbody2D rb2d;
     private AudioManager audioManager;
 
-//    public float knockback;
-//    public float knockbackCount;
-//    public float knockbackLength;
-//    public bool knockFromRight;
-//    public float maxDash = 10f;
-//    public float maxDashUp = 10f;
-    
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -93,40 +91,26 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetButton("Fire"))
         {
-            audioManager.PlaySound("Firing");
-            SpawnBullet();
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (!(isDashWallBlocked || isDashOnCooldown))
+            if (!isFireOnCooldown)
             {
-                audioManager.PlaySound("Powerup");
-                dashRight();
-                isDashOnCooldown = true;
-                StartCoroutine(DoAfterSeconds(dashCooldown, () => isDashOnCooldown = false));
-//            anim.SetBool("Blink", true);
+                isFireOnCooldown = true;
+                FireBullet();
+                StartCoroutine(DoAfterSeconds(fireCooldown, () => isFireOnCooldown = false));
             }
         }
 
-//        var moveVelocity = 0f;
-//        if (Input.GetKey(KeyCode.D)) moveVelocity = moveSpeed;
-//        if (Input.GetKey(KeyCode.A)) moveVelocity = -moveSpeed;
-//
-//        if (knockbackCount <= 0)
-//        {
-//            rb2d.velocity = new Vector2(moveVelocity, rb2d.velocity.y);
-//        }
-//        else
-//        {
-//            if (knockFromRight)
-//                transform.Translate(-0.1f, 0.1f, 0f);
-//            if (!knockFromRight)
-//                transform.Translate(0.1f, 0.1f, 0f);
-//            knockbackCount -= Time.deltaTime;
-//        }
+        if (Input.GetButtonDown("Blink"))
+        {
+            if (!(isDashWallBlocked || isDashOnCooldown))
+            {
+                isDashOnCooldown = true;
+                DashRight();
+                StartCoroutine(DoAfterSeconds(dashCooldown, () => isDashOnCooldown = false));
+                anim.SetTrigger("Blink");
+            }
+        }
     }
 
     public IEnumerator DoAfterSeconds(float delay, Action op)
@@ -154,17 +138,18 @@ public class PlayerController : MonoBehaviour
         this.isFacingRight = isFacingRight;
     }
 
-    private void dashRight()
+    private void DashRight()
     {
         var dist = Vector3.right * 2.0f;
         if (!isFacingRight)
             dist *= -1;
         transform.Translate(dist);
+        audioManager.PlaySound("Powerup");
     }
 
-    private void SpawnBullet()
+    private void FireBullet()
     {
-        audioManager.PlaySound("Firing");
         Instantiate(bullet, firePoint.position, firePoint.rotation);
+        audioManager.PlaySound("Firing");
     }
 }

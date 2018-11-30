@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4507877390777994}
   - component: {fileID: 212796330069443898}
   m_Layer: 0
-  m_Name: dash check
+  m_Name: Dash Check
   m_TagString: Untagged
   m_Icon: {fileID: -3114416830163030229, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4126125928312438}
   m_Layer: 9
-  m_Name: ground check
+  m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4074720881938634}
   - component: {fileID: 96387082847883480}
   m_Layer: 9
-  m_Name: firePoint
+  m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: -6039275892498968547, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -310,9 +310,10 @@ MonoBehaviour:
     m_Bits: 256
   bullet: {fileID: 1000011601934616, guid: f60cefb0bca842b409255da6b2a3d077, type: 2}
   firePoint: {fileID: 4074720881938634}
+  fireCooldown: 0.3
   dashCheck: {fileID: 4507877390777994}
   dashCheckRadius: 0.1
-  dashCooldown: 2
+  dashCooldown: 1
 --- !u!212 &212743092139200906
 SpriteRenderer:
   m_ObjectHideFlags: 1
