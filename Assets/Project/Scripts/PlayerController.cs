@@ -4,8 +4,8 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
-
     public float jumpHeight;
+
     bool facingRight = true;
 
     public Transform groundCheck;
@@ -131,11 +131,11 @@ public class PlayerController : MonoBehaviour
         if (moveInput.x != 0)
             SetIsFacingRight(moveInput.x > 0);
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            currentScale = 1.5f - currentScale;
-            RescaleSprite(currentScale);
-        }
+//        if (Input.GetKeyDown(KeyCode.E))
+//        {
+//            currentScale = 1.5f - currentScale;
+//            RescaleSprite(currentScale);
+//        }
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -162,7 +162,6 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Shooting", false);
         }
-
 
         //This is to create phantom bound
         if (Input.GetKeyDown(KeyCode.K) && Time.time > boundDelayCounter)
@@ -392,12 +391,12 @@ public class PlayerController : MonoBehaviour
     {
         if (gameObject.tag == "Player_blue")
         {
-            //audioManager.PlaySound ("Firing");
+            audioManager.PlaySound ("Firing");
             Instantiate(bullet, firePoint.position, firePoint.rotation);
         }
         else
         {
-            //audioManager.PlaySound ("Firing");
+            audioManager.PlaySound ("Firing");
             Instantiate(bullet_red, firePoint.position, firePoint.rotation);
         }
     }
