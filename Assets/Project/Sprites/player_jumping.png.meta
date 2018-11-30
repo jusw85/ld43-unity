@@ -4,10 +4,10 @@ timeCreated: 1515226686
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: character_test_jumping_0
-    21300002: character_test_jumping_1
-    21300004: character_test_jumping_2
-    21300006: character_test_jumping_3
+    21300000: player_jumping_0
+    21300002: player_jumping_1
+    21300004: player_jumping_2
+    21300006: player_jumping_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -50,7 +50,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character_test_jumping_0
+      name: player_jumping_0
       rect:
         serializedVersion: 2
         x: 0
@@ -123,7 +123,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_test_jumping_1
+      name: player_jumping_1
       rect:
         serializedVersion: 2
         x: 64
@@ -137,7 +137,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_test_jumping_2
+      name: player_jumping_2
       rect:
         serializedVersion: 2
         x: 128
@@ -151,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_test_jumping_3
+      name: player_jumping_3
       rect:
         serializedVersion: 2
         x: 192

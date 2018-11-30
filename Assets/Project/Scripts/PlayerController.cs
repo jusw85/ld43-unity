@@ -296,7 +296,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.U))
         {
-            audioManager.PlaySound("Powerup");
+//            audioManager.PlaySound("Powerup");
             PlayerColorChange();
         }
     }
