@@ -66,7 +66,7 @@ public class LevelManager : MonoBehaviour
         camera.enabled = true;
         player.GetComponent<Rigidbody2D>().gravityScale = 2f;
         player.transform.position = currentCheckpoint.transform.position;
-        player.knockbackCount = 0;
+//        player.knockbackCount = 0;
         player.enabled = true;
         player.GetComponent<Renderer>().enabled = true;
         healthManager.FullHealth();
