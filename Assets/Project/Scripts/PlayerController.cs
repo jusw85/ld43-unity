@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void KillMyself()
+    public void KillMyself()
     {
         Destroy(gameObject);
     }

@@ -4,20 +4,12 @@ using System.Collections;
 public class LevelManager : MonoBehaviour
 {
     public GameObject currentCheckpoint;
-
     private PlayerController player;
-
     public GameObject deathParticle;
     public GameObject respawnParticle;
-
     public int pointPenaltyOnDeath;
-
     public float respawnDelay;
-
-    private float gravityStore;
-
     private Camera2DFollow camera;
-
     public HealthManager healthManager;
 
     //cache
@@ -27,9 +19,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-
         healthManager = FindObjectOfType<HealthManager>();
-
         camera = FindObjectOfType<Camera2DFollow>();
 
         //caching
@@ -58,11 +48,11 @@ public class LevelManager : MonoBehaviour
         Instantiate(deathParticle, player.transform.position, player.transform.rotation);
         player.enabled = false;
         player.GetComponent<Renderer>().enabled = false;
-        gravityStore = player.GetComponent<Rigidbody2D>().gravityScale;
         player.GetComponent<Rigidbody2D>().gravityScale = 0f;
         ScoreManager.AddPoints(-pointPenaltyOnDeath);
         Debug.Log("Player Respawn");
         yield return new WaitForSeconds(respawnDelay);
+
         camera.enabled = true;
         player.GetComponent<Rigidbody2D>().gravityScale = 2f;
         player.transform.position = currentCheckpoint.transform.position;
