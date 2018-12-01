@@ -1,8 +1,7 @@
-using UnityEngine;
-using UnityEditor;
-using Tiled2Unity;
 using System.Collections.Generic;
-using System;
+using Tiled2Unity;
+using UnityEditor;
+using UnityEngine;
 
 [CustomTiledImporter]
 public class TiledImporter : ICustomTiledImporter
@@ -11,11 +10,19 @@ public class TiledImporter : ICustomTiledImporter
 //
     public void CustomizePrefab(GameObject prefab)
     {
+        FixRendererMaterial(prefab);
         AddSpikeController(prefab);
+    }
 
-        Transform transform = prefab.transform.Find("Background/bounds_tilesheet");
-        var renderer = transform.GetComponent<MeshRenderer>();
-        renderer.sharedMaterial.shader = Shader.Find("Sprites/Diffuse");
+    private void FixRendererMaterial(GameObject prefab)
+    {
+        string[] xs = {"Background/bg_tile1", "Background/bounds_tilesheet"};
+        foreach (var x in xs)
+        {
+            Transform transform = prefab.transform.Find(x);
+            var renderer = transform.GetComponent<MeshRenderer>();
+            renderer.sharedMaterial.shader = Shader.Find("Sprites/Diffuse");
+        }
     }
 
     private void AddSpikeController(GameObject prefab)
@@ -56,6 +63,7 @@ public class TiledImporter : ICustomTiledImporter
         if (customProperties.ContainsKey("type"))
         {
             var spawnType = customProperties["type"];
+//            Debug.Log(spawnType);
             if (spawnType != null)
             {
                 var spawnedObject = SpawnGeneric(spawnType, gameObject);
@@ -70,17 +78,27 @@ public class TiledImporter : ICustomTiledImporter
 
     public GameObject SpawnGeneric(string spawnType, GameObject parent)
     {
-        var collider = parent.GetComponentInChildren<Collider2D>();
-        if (collider == null) return null;
-
         var prefabPath = "Assets/Project/Prefabs/" + spawnType + ".prefab";
         var spawn = AssetDatabase.LoadAssetAtPath(prefabPath, typeof(GameObject));
 
         GameObject spawnInstance = (GameObject) GameObject.Instantiate(spawn);
         spawnInstance.name = spawn.name;
-        spawnInstance.transform.parent = collider.gameObject.transform;
 
-        Vector3 offset = collider.bounds.center - parent.transform.position;
+        var collider = parent.GetComponentInChildren<Collider2D>();
+        Vector3 offset;
+        if (collider != null)
+        {
+            offset = collider.bounds.center - parent.transform.position;
+            collider.enabled = false;
+        }
+        else
+        {
+            var child = parent.transform.GetChild(0);
+            offset = child.localPosition;
+            Object.DestroyImmediate(child.gameObject);
+        }
+
+        spawnInstance.transform.parent = parent.transform;
         spawnInstance.transform.localPosition = offset;
         return spawnInstance;
     }
