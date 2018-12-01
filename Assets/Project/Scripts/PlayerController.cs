@@ -72,7 +72,10 @@ public class PlayerController : MonoBehaviour
     public void Death()
     {
         var xylem = Instantiate(xylemStick, transform.position, Quaternion.identity);
-        xylem.GetComponent<Rigidbody2D>().velocity = -rb2d.velocity;
+        var vel = new Vector2(rb2d.velocity.x, -rb2d.velocity.y);
+        vel.Normalize();
+        vel *= 5;
+        xylem.GetComponent<Rigidbody2D>().velocity = vel;
         spawnPoint.Spawn();
         Destroy(gameObject);
     }
