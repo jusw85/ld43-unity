@@ -5,10 +5,20 @@ using UnityEngine;
 public class SpawnPointController : MonoBehaviour
 {
     public GameObject spawnType;
+    public float initialSpawnDelay = 0.0f;
+    public float defaultSpawnDelay = 2.0f;
 
     private void Awake()
     {
-        SpawnNow();
+        if (initialSpawnDelay <= 0f)
+            SpawnNow();
+        else
+            Spawn(defaultSpawnDelay);
+    }
+
+    public void Spawn()
+    {
+        Spawn(defaultSpawnDelay);
     }
 
     public void Spawn(float delay)

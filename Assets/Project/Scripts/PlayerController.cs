@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
+    public GameObject xylemStick;
 
     private Vector2 moveInput;
     private bool toJump;
@@ -70,7 +71,8 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
-        spawnPoint.Spawn(2.0f);
+        Instantiate(xylemStick, transform.position, Quaternion.identity);
+        spawnPoint.Spawn();
         Destroy(gameObject);
     }
 

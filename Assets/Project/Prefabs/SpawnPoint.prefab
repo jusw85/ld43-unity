@@ -52,3 +52,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnType: {fileID: 1074065249609518, guid: 5e392e1433358e5448304dc7054643f7, type: 2}
+  initialSpawnDelay: 0
+  defaultSpawnDelay: 2
