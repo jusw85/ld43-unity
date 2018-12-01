@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using Tiled2Unity;
 
 public class EnemyPatrol : MonoBehaviour
 {
