@@ -1,18 +1,20 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Player Stuff")]
     public float moveSpeed;
-
     public float jumpHeight;
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     public LayerMask whatIsWall;
-    public LayerMask whatIsWallUp;
+//    public LayerMask whatIsWallUp;
+    public float maxLifeTime;
+    public Slider lifeTimeSlider;
 
     [Header("Firing Stuff")]
     public GameObject bullet;
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private bool isFireOnCooldown;
     private bool isDashWallBlocked;
     private bool isDashOnCooldown;
+    private float currentLifeTime;
 
     private Animator anim;
     private Rigidbody2D rb2d;
@@ -43,6 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        currentLifeTime = maxLifeTime;
     }
 
     private void Start()
@@ -72,6 +76,12 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        currentLifeTime -= Time.deltaTime;
+        lifeTimeSlider.value = currentLifeTime / maxLifeTime;
+        if (currentLifeTime <= 0f)
+        {
+            KillMyself();
+        }
         moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (moveInput.x != 0)
             SetIsFacingRight(moveInput.x > 0);
@@ -111,6 +121,11 @@ public class PlayerController : MonoBehaviour
                 anim.SetTrigger("Blink");
             }
         }
+    }
+
+    private void KillMyself()
+    {
+        Destroy(gameObject);
     }
 
     public IEnumerator DoAfterSeconds(float delay, Action op)
