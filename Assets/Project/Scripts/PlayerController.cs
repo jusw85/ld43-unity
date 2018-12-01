@@ -11,30 +11,30 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
-    public float maxLifeTime;
-    public Slider lifeTimeSlider;
 
     private Vector2 moveInput;
     private bool toJump;
     private bool isGrounded;
     private bool isFacingRight = true;
-    private float currentLifeTime;
 
     private Animator anim;
     private Rigidbody2D rb2d;
     private AudioManager audioManager;
 
+    [System.NonSerialized]
+    public SpawnPointController spawnPoint;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
-        currentLifeTime = maxLifeTime;
     }
 
     private void Start()
     {
         audioManager = AudioManager.instance;
         if (audioManager == null) Debug.LogError("No audio Manager found");
+//        Camera.main.GetComponent<Camera2DFollow>().target = transform;
     }
 
     private void FixedUpdate()
@@ -54,12 +54,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        currentLifeTime -= Time.deltaTime;
-        lifeTimeSlider.value = currentLifeTime / maxLifeTime;
-        if (currentLifeTime <= 0f)
-        {
-            KillMyself();
-        }
         moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (moveInput.x != 0)
             SetIsFacingRight(moveInput.x > 0);
@@ -74,8 +68,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void KillMyself()
+    public void Death()
     {
+        spawnPoint.Spawn(2.0f);
         Destroy(gameObject);
     }
 

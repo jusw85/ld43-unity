@@ -17,19 +17,17 @@ public class Camera2DFollow : MonoBehaviour
 
     float nextTimeToSearch = 0;
 
-    //public float shakeTimer;
-    //public float shakeAmount;
-
-    // Use this for initialization
-    void Start()
+    private void Start()
     {
-        lastTargetPosition = target.position;
-        offsetZ = (transform.position - target.position).z;
+        if (target != null)
+        {
+            lastTargetPosition = target.position;
+            offsetZ = (transform.position - target.position).z;
+        }
         transform.parent = null;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (target == null)
         {
@@ -37,9 +35,7 @@ public class Camera2DFollow : MonoBehaviour
             return;
         }
 
-        // only update lookahead pos if accelerating or changed direction
         float xMoveDelta = (target.position - lastTargetPosition).x;
-
         bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
 
         if (updateLookAheadTarget)
@@ -59,13 +55,6 @@ public class Camera2DFollow : MonoBehaviour
         transform.position = newPos;
 
         lastTargetPosition = target.position;
-
-        //if (shakeTimer >= 0) 
-        //{
-        //Vector2 ShakePos = Random.insideUnitCircle * shakeAmount;
-        //transform.position = new Vector3 (transform.position.x + ShakePos.x, transform.position.y + ShakePos.y, transform.position.z);
-        //shakeTimer -= Time.deltaTime;
-        //}
     }
 
     void FindPlayer()
@@ -74,14 +63,13 @@ public class Camera2DFollow : MonoBehaviour
         {
             GameObject searchResult = GameObject.FindGameObjectWithTag("Player");
             if (searchResult != null)
+            {
                 target = searchResult.transform;
+                lastTargetPosition = target.position;
+                offsetZ = (transform.position - target.position).z;
+            }
+
             nextTimeToSearch = Time.time + 0.5f;
         }
     }
-
-    //public void ShakeCamera(float shakePwr, float shakeDur)
-    //{
-    //shakeAmount = shakePwr;
-    //shakeTimer = shakeDur;
-    //}
 }
