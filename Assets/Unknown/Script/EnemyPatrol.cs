@@ -1,56 +1,61 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class EnemyPatrol : MonoBehaviour
 {
     public float moveSpeed;
-    bool facingRight = true;
-
     public Transform wallCheck;
     public float wallCheckRadius;
     public LayerMask whatIsWall;
-    private bool hittingWall;
-
-    private bool notAtEdge;
     public Transform edgeCheck;
+    public bool initialFacingRight = true;
 
-    // Use this for initialization
-    void Start()
+    private Rigidbody2D rb2d;
+    private Transform groundCheck;
+    private bool facingRight;
+
+    private void Awake()
     {
+        rb2d = GetComponent<Rigidbody2D>();
+        groundCheck = transform.Find("groundCheck");
+        facingRight = initialFacingRight;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        hittingWall = Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, whatIsWall);
+        var grounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, whatIsWall);
+        if (grounded)
+        {
+//            Debug.Log("Is Grounded");
+            var hittingWall = Physics2D.OverlapCircle(wallCheck.position, 0.05f, whatIsWall);
+            var isAtEdge = !Physics2D.OverlapCircle(edgeCheck.position, wallCheckRadius, whatIsWall);
 
-        notAtEdge = Physics2D.OverlapCircle(edgeCheck.position, wallCheckRadius, whatIsWall);
-
-        if (hittingWall || !notAtEdge)
-            facingRight = !facingRight;
-
+            if (hittingWall || isAtEdge)
+//            if (hittingWall)
+//            if (isAtEdge)
+            {
+//                Debug.Log("Do Flip");
+                facingRight = !facingRight;
+            }
+        }
 
         if (facingRight)
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-
-        else
-
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-    }
-
-    void FixedUpdate()
-    {
-        if (facingRight)
+        {
             transform.localScale = new Vector3(1f, 1f, 0f);
+            rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y);
+        }
+
         if (!facingRight)
+        {
             transform.localScale = new Vector3(-1f, 1f, 0f);
+            rb2d.velocity = new Vector2(-moveSpeed, rb2d.velocity.y);
+        }
     }
 
-    void Flip()
-    {
-        facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-    }
+//    void Flip()
+//    {
+//        facingRight = !facingRight;
+//        Vector3 theScale = transform.localScale;
+//        theScale.x *= -1;
+//        transform.localScale = theScale;
+//    }
 }
