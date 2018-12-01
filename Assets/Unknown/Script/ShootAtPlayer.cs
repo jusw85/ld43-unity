@@ -7,25 +7,18 @@ public class ShootAtPlayer : MonoBehaviour
     public float speedFactor;
     public float Delay;
 
-    // Use this for initialization
-    void Start()
+    private void Start()
     {
         StartCoroutine(Shoots());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
-    IEnumerator Shoots()
+    private IEnumerator Shoots()
     {
         while (true)
         {
             yield return new WaitForSeconds(Delay);
-
-            GameObject clone = (GameObject) Instantiate(projectile, transform.position, Quaternion.identity);
-
+            var clone = Instantiate(projectile, transform.position, Quaternion.identity);
             clone.GetComponent<Rigidbody2D>().velocity = transform.right * speedFactor;
         }
     }

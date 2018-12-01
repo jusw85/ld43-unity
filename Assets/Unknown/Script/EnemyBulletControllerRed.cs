@@ -4,27 +4,16 @@ using System.Collections;
 public class EnemyBulletControllerRed : MonoBehaviour
 {
     public float speed;
-
     public PlayerController player;
-
     public GameObject impactEffect;
-
     public float rotationSpeed;
 
-    public int damageToGive;
+    private Rigidbody2D rb2d;
 
-    private Rigidbody2D myrigidbody2D;
-
-    public HealthManager healthManager;
-
-
-    void Start()
+    private void Start()
     {
         player = FindObjectOfType<PlayerController>();
-
-        myrigidbody2D = GetComponent<Rigidbody2D>();
-
-        healthManager = FindObjectOfType<HealthManager>();
+        rb2d = GetComponent<Rigidbody2D>();
 
         if (player.transform.position.x < transform.position.x)
         {
@@ -33,21 +22,14 @@ public class EnemyBulletControllerRed : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
-        myrigidbody2D.velocity = new Vector2(speed, myrigidbody2D.velocity.y);
-
-        myrigidbody2D.angularVelocity = rotationSpeed;
+        rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
+        rb2d.angularVelocity = rotationSpeed;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player_blue")
-        {
-            Debug.Log("Player Hit");
-            healthManager.HurtPlayer(damageToGive);
-        }
-
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }

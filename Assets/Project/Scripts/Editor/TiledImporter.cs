@@ -20,8 +20,11 @@ public class TiledImporter : ICustomTiledImporter
         foreach (var x in xs)
         {
             Transform transform = prefab.transform.Find(x);
-            var renderer = transform.GetComponent<MeshRenderer>();
-            renderer.sharedMaterial.shader = Shader.Find("Sprites/Diffuse");
+            if (transform != null)
+            {
+                var renderer = transform.GetComponent<MeshRenderer>();
+                renderer.sharedMaterial.shader = Shader.Find("Sprites/Diffuse");
+            }
         }
     }
 

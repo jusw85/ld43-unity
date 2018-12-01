@@ -5,13 +5,7 @@ public class DestroyObjectOverTime : MonoBehaviour
 {
     public float lifeTime;
 
-    // Use this for initialization
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         lifeTime -= Time.deltaTime;
 
