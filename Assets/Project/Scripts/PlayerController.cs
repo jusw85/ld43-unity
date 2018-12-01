@@ -11,31 +11,13 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
-    public LayerMask whatIsWall;
-//    public LayerMask whatIsWallUp;
     public float maxLifeTime;
     public Slider lifeTimeSlider;
-
-    [Header("Firing Stuff")]
-    public GameObject bullet;
-
-    public Transform firePoint;
-    public float fireCooldown = 0.5f;
-
-    [Header("Dashing Stuff")]
-    public Transform dashCheck;
-
-    public float dashCheckRadius;
-    public float dashCooldown = 2.0f;
 
     private Vector2 moveInput;
     private bool toJump;
     private bool isGrounded;
-    private bool canDoubleJump;
     private bool isFacingRight = true;
-    private bool isFireOnCooldown;
-    private bool isDashWallBlocked;
-    private bool isDashOnCooldown;
     private float currentLifeTime;
 
     private Animator anim;
@@ -58,10 +40,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
-        isDashWallBlocked = Physics2D.OverlapCircle(dashCheck.position, dashCheckRadius, whatIsWall);
-
-        if (isGrounded)
-            canDoubleJump = true;
 
         var newVelocity = rb2d.velocity;
         newVelocity.x = moveInput.x * moveSpeed;
@@ -92,33 +70,6 @@ public class PlayerController : MonoBehaviour
             {
                 toJump = true;
                 audioManager.PlaySound("Jump");
-            }
-            else if (canDoubleJump)
-            {
-                canDoubleJump = false;
-                toJump = true;
-                audioManager.PlaySound("Jump");
-            }
-        }
-
-        if (Input.GetButton("Fire"))
-        {
-            if (!isFireOnCooldown)
-            {
-                isFireOnCooldown = true;
-                FireBullet();
-                StartCoroutine(DoAfterSeconds(fireCooldown, () => isFireOnCooldown = false));
-            }
-        }
-
-        if (Input.GetButtonDown("Blink"))
-        {
-            if (!(isDashWallBlocked || isDashOnCooldown))
-            {
-                isDashOnCooldown = true;
-                DashRight();
-                StartCoroutine(DoAfterSeconds(dashCooldown, () => isDashOnCooldown = false));
-                anim.SetTrigger("Blink");
             }
         }
     }
@@ -153,18 +104,4 @@ public class PlayerController : MonoBehaviour
         this.isFacingRight = isFacingRight;
     }
 
-    private void DashRight()
-    {
-        var dist = Vector3.right * 2.0f;
-        if (!isFacingRight)
-            dist *= -1;
-        transform.Translate(dist);
-        audioManager.PlaySound("Powerup");
-    }
-
-    private void FireBullet()
-    {
-        Instantiate(bullet, firePoint.position, firePoint.rotation);
-        audioManager.PlaySound("Firing");
-    }
 }
