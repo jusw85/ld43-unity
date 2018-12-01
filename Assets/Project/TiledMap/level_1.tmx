@@ -102,7 +102,7 @@
  <layer name="Solid" width="74" height="36">
   <properties>
    <property name="unity:ignore" value="visual"/>
-   <property name="unity:layer" value="Solid"/>
+   <property name="unity:layer" value="Ground"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -193,6 +193,5 @@
     <property name="type" value="SpawnPoint"/>
    </properties>
   </object>
-  <object id="96" x="185.333" y="172"/>
  </objectgroup>
 </map>
