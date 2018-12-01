@@ -4,53 +4,51 @@ using System.Collections;
 public class EnemyPatrol : MonoBehaviour
 {
     public float moveSpeed;
-    bool facingRight = true;
-
     public Transform wallCheck;
     public float wallCheckRadius;
     public LayerMask whatIsWall;
-    private bool hittingWall;
-
-    private bool notAtEdge;
     public Transform edgeCheck;
+    public bool facingRight = true;
 
-    // Use this for initialization
-    void Start()
+    private Rigidbody2D rb2d;
+
+    private void Awake()
     {
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        hittingWall = Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, whatIsWall);
+        if (Mathf.Abs(rb2d.velocity.y) <= Mathf.Epsilon)
+        {
+            var hittingWall = Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, whatIsWall);
+            var isAtEdge = !Physics2D.OverlapCircle(edgeCheck.position, wallCheckRadius, whatIsWall);
 
-        notAtEdge = Physics2D.OverlapCircle(edgeCheck.position, wallCheckRadius, whatIsWall);
-
-        if (hittingWall || !notAtEdge)
-            facingRight = !facingRight;
-
+            if (hittingWall || isAtEdge)
+            {
+                Debug.Log("!FLIP!");
+                facingRight = !facingRight;
+            }
+        }
 
         if (facingRight)
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-
-        else
-
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-    }
-
-    void FixedUpdate()
-    {
-        if (facingRight)
+        {
             transform.localScale = new Vector3(1f, 1f, 0f);
+            rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y);
+        }
+
         if (!facingRight)
+        {
             transform.localScale = new Vector3(-1f, 1f, 0f);
+            rb2d.velocity = new Vector2(-moveSpeed, rb2d.velocity.y);
+        }
     }
 
-    void Flip()
-    {
-        facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-    }
+//    void Flip()
+//    {
+//        facingRight = !facingRight;
+//        Vector3 theScale = transform.localScale;
+//        theScale.x *= -1;
+//        transform.localScale = theScale;
+//    }
 }
