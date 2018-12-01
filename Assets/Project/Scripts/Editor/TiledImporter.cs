@@ -12,16 +12,10 @@ public class TiledImporter : ICustomTiledImporter
     public void CustomizePrefab(GameObject prefab)
     {
         AddSpikeController(prefab);
-        ChangeBackgroundMaterial(prefab);
-    }
 
-    private void ChangeBackgroundMaterial(GameObject prefab)
-    {
         Transform transform = prefab.transform.Find("Background/bounds_tilesheet");
-        if (transform != null)
-        {
-//            transform.GetComponent<
-        }
+        var renderer = transform.GetComponent<MeshRenderer>();
+        renderer.sharedMaterial.shader = Shader.Find("Sprites/Diffuse");
     }
 
     private void AddSpikeController(GameObject prefab)
@@ -49,7 +43,7 @@ public class TiledImporter : ICustomTiledImporter
 //                    polygonCollider.SetPath(i, points);
 //                }
 //            }
-        }        
+        }
     }
 
 //

@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Player Stuff")]
     public float moveSpeed;
+
     public float jumpHeight;
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -71,12 +72,20 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
-        var xylem = Instantiate(xylemStick, transform.position, Quaternion.identity);
-        var vel = new Vector2(rb2d.velocity.x, -rb2d.velocity.y);
-        vel.Normalize();
-        vel *= 5;
-        xylem.GetComponent<Rigidbody2D>().velocity = vel;
-        spawnPoint.Spawn();
+        if (xylemStick != null)
+        {
+            var xylem = Instantiate(xylemStick, transform.position, Quaternion.identity);
+            var vel = new Vector2(rb2d.velocity.x, -rb2d.velocity.y);
+            vel.Normalize();
+            vel *= 5;
+            xylem.GetComponent<Rigidbody2D>().velocity = vel;
+        }
+
+        if (spawnPoint != null)
+        {
+            spawnPoint.Spawn();
+        }
+
         Destroy(gameObject);
     }
 
@@ -104,5 +113,4 @@ public class PlayerController : MonoBehaviour
 
         this.isFacingRight = isFacingRight;
     }
-
 }
