@@ -5,14 +5,31 @@ using System.Collections.Generic;
 using System;
 
 [CustomTiledImporter]
-public class TiledImporter : ICustomTiledImporter {
-
+public class TiledImporter : ICustomTiledImporter
+{
 //    private const float SkinWidth = 0.05f;
 //
-    public void CustomizePrefab(GameObject prefab) {
-//        Transform transform = prefab.transform.Find("Spikes/Collision");
-//        if (transform != null) {
-//            transform.gameObject.AddComponent<SpikesController>();
+    public void CustomizePrefab(GameObject prefab)
+    {
+        AddSpikeController(prefab);
+        ChangeBackgroundMaterial(prefab);
+    }
+
+    private void ChangeBackgroundMaterial(GameObject prefab)
+    {
+        Transform transform = prefab.transform.Find("Background/bounds_tilesheet");
+        if (transform != null)
+        {
+//            transform.GetComponent<
+        }
+    }
+
+    private void AddSpikeController(GameObject prefab)
+    {
+        Transform transform = prefab.transform.Find("Spikes/Collision");
+        if (transform != null)
+        {
+            transform.gameObject.AddComponent<SpikesController>();
 //            PolygonCollider2D polygonCollider = transform.GetComponent<PolygonCollider2D>();
 //            if (polygonCollider != null) {
 //                for (int i = 0; i < polygonCollider.pathCount; i++) {
@@ -32,34 +49,40 @@ public class TiledImporter : ICustomTiledImporter {
 //                    polygonCollider.SetPath(i, points);
 //                }
 //            }
-//        }
+        }        
     }
+
 //
 //    //private Vector2[] expandBoxBounds(float v) {
 //    //}
 //
-    public void HandleCustomProperties(GameObject gameObject, IDictionary<string, string> customProperties) {
+    public void HandleCustomProperties(GameObject gameObject, IDictionary<string, string> customProperties)
+    {
 //        //printDictionary(customProperties);
-//        if (customProperties.ContainsKey("type")) {
-//            var spawnType = customProperties["type"];
-//            if (spawnType != null) {
-//                var spawnedObject = SpawnGeneric(spawnType, gameObject);
-//                if (spawnType.Equals("Powerup")) {
+        if (customProperties.ContainsKey("type"))
+        {
+            var spawnType = customProperties["type"];
+            if (spawnType != null)
+            {
+                var spawnedObject = SpawnGeneric(spawnType, gameObject);
+//                if (spawnType.Equals("Powerup"))
+//                {
 //                    var powerup = customProperties["powerup"];
 //                    spawnedObject.GetComponent<PowerupController>().powerup = powerup;
 //                }
-//            }
-//        }
+            }
+        }
     }
 
-    public GameObject SpawnGeneric(string spawnType, GameObject parent) {
+    public GameObject SpawnGeneric(string spawnType, GameObject parent)
+    {
         var collider = parent.GetComponentInChildren<Collider2D>();
         if (collider == null) return null;
 
         var prefabPath = "Assets/Project/Prefabs/" + spawnType + ".prefab";
         var spawn = AssetDatabase.LoadAssetAtPath(prefabPath, typeof(GameObject));
 
-        GameObject spawnInstance = (GameObject)GameObject.Instantiate(spawn);
+        GameObject spawnInstance = (GameObject) GameObject.Instantiate(spawn);
         spawnInstance.name = spawn.name;
         spawnInstance.transform.parent = collider.gameObject.transform;
 
@@ -68,10 +91,11 @@ public class TiledImporter : ICustomTiledImporter {
         return spawnInstance;
     }
 
-    private void printDictionary(IDictionary<string, string> dictionary) {
-        foreach (KeyValuePair<string, string> kvp in dictionary) {
+    private void printDictionary(IDictionary<string, string> dictionary)
+    {
+        foreach (KeyValuePair<string, string> kvp in dictionary)
+        {
             Debug.Log(kvp.Key + ": " + kvp.Value);
         }
     }
-
 }
