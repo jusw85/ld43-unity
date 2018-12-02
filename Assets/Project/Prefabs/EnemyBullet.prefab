@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50000010848431858}
   - component: {fileID: 114000011454564364}
   - component: {fileID: 114000010060522734}
+  - component: {fileID: 114529682053314434}
   m_Layer: 16
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -229,12 +230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a55b3d2c2fa9340b89692e80c98966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  player: {fileID: 0}
-  impactEffect: {fileID: 158360, guid: 0c1baa46a94a39b4892a7c5c2ac8376d, type: 2}
   rotationSpeed: 500
-  damageToGive: 0
-  healthManager: {fileID: 0}
+  impactEffect: {fileID: 158360, guid: 0c1baa46a94a39b4892a7c5c2ac8376d, type: 2}
 --- !u!114 &114000011454564364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,6 +244,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 10
+--- !u!114 &114529682053314434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010489749646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc2a41b9a063a144bec9b6879bd9c11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000010703449298
 SpriteRenderer:
   m_ObjectHideFlags: 1
