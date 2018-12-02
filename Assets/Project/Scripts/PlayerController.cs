@@ -118,12 +118,16 @@ public class PlayerController : MonoBehaviour
     }
 
     private Vector2 oldVel;
+
     public void Death()
     {
-        isDying = true;
-        anim.Play("Death");
-        oldVel = rb2d.velocity;
-        Destroy(rb2d);
+        if (!isDying)
+        {
+            isDying = true;
+            anim.Play("Death");
+            oldVel = rb2d.velocity;
+            Destroy(rb2d);
+        }
     }
 
     public GameObject splatter;
