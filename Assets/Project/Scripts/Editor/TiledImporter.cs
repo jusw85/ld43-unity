@@ -16,7 +16,7 @@ public class TiledImporter : ICustomTiledImporter
 
     private void FixRendererMaterial(GameObject prefab)
     {
-        string[] xs = {"Background/bg_tile1", "Background/bounds_tilesheet"};
+        string[] xs = {"Background/background_1", "Background/background_2", "Background/bounds_tilesheet"};
         foreach (var x in xs)
         {
             Transform transform = prefab.transform.Find(x);
