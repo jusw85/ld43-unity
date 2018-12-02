@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb2d;
     private AudioManager audioManager;
-    private List<IActivator> activatables;
+    private List<IActivator> activators;
 
     [System.NonSerialized]
     public SpawnPointController spawnPoint;
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
-        activatables = new List<IActivator>();
+        activators = new List<IActivator>();
     }
 
     private void Start()
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire"))
         {
-            foreach (IActivator ia in activatables)
+            foreach (IActivator ia in activators)
             {
                 ia.Activate();
             }
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
         IActivator ia = c2d.GetComponent<IActivator>();
         if (ia != null)
         {
-            activatables.Add(ia);
+            activators.Add(ia);
         }
     }
 
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
         IActivator ia = c2d.GetComponent<IActivator>();
         if (ia != null)
         {
-            activatables.Remove(ia);
+            activators.Remove(ia);
         }
     }
 

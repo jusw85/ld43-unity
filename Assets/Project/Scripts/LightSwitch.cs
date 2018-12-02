@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-public class RemoteSwitch : MonoBehaviour, IActivator
+public class LightSwitch : MonoBehaviour
 {
     public int targetId;
     private IActivatable target;
@@ -25,18 +25,36 @@ public class RemoteSwitch : MonoBehaviour, IActivator
         return targetId;
     }
 
-    public void Activate()
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if (target != null)
+        if (target == null) return;
+        if (other.tag.Equals("Player") || other.tag.Equals("Pallet"))
         {
-            target.ToggleActivate();
+            target.Activate();
         }
-        else
+    }
+    
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (target == null) return;
+        if (other.tag.Equals("Player") || other.tag.Equals("Pallet"))
         {
-            Debug.LogError("Cant find target id!");
+            target.Deactivate();
         }
     }
 
+//    public void Activate()
+//    {
+//        if (target != null)
+//        {
+//            target.Activate();
+//        }
+//        else
+//        {
+//            Debug.LogError("Cant find target id!");
+//        }
+//    }
+//
     private void SearchActivatables()
     {
         var ss = FindObjectsOfType<Object>().OfType<IActivatable>();
