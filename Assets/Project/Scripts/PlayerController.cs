@@ -57,8 +57,18 @@ public class PlayerController : MonoBehaviour
         rb2d.velocity = newVelocity;
     }
 
+    private bool isSpawning = true;
+
+    public bool IsSpawning
+    {
+        get { return isSpawning; }
+        set { isSpawning = value; }
+    }
+
     private void Update()
     {
+        if (isSpawning) return;
+
         moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (moveInput.x != 0)
             SetIsFacingRight(moveInput.x > 0);
