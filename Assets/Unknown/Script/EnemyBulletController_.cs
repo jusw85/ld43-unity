@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyBulletController : MonoBehaviour
+public class EnemyBulletController_ : MonoBehaviour
 {
     public float speed;
 
