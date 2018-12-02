@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isSpawning || isDying) return;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
         var newVelocity = rb2d.velocity;
@@ -58,6 +59,13 @@ public class PlayerController : MonoBehaviour
     }
 
     private bool isSpawning = true;
+    private bool isDying = false;
+
+    public bool IsDying
+    {
+        get { return isDying; }
+        set { isDying = value; }
+    }
 
     public bool IsSpawning
     {
@@ -67,7 +75,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (isSpawning) return;
+        if (isSpawning || isDying) return;
 
         moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (moveInput.x != 0)
@@ -109,20 +117,37 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private Vector2 oldVel;
     public void Death()
     {
-        if (xylemStick != null)
-        {
-            var xylem = Instantiate(xylemStick, transform.position, Quaternion.identity);
-            var vel = new Vector2(rb2d.velocity.x, -rb2d.velocity.y);
-            vel.Normalize();
-            vel *= 5;
-            xylem.GetComponent<Rigidbody2D>().velocity = vel;
-        }
+        isDying = true;
+        anim.Play("Death");
+        oldVel = rb2d.velocity;
+        Destroy(rb2d);
+    }
 
+    public GameObject splatter;
+
+    public void PostDeathAnimation()
+    {
         if (spawnPoint != null)
         {
             spawnPoint.Spawn();
+        }
+
+        if (splatter != null)
+        {
+            Instantiate(splatter, transform.position, Quaternion.identity);
+            splatter.transform.localScale = transform.localScale;
+        }
+
+        if (xylemStick != null)
+        {
+            var xylem = Instantiate(xylemStick, transform.position, Quaternion.identity);
+            var vel = new Vector2(oldVel.x, -oldVel.y);
+            vel.Normalize();
+            vel *= 5;
+            xylem.GetComponent<Rigidbody2D>().velocity = vel;
         }
 
         Destroy(gameObject);
@@ -136,6 +161,7 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (isSpawning || isDying) return;
         anim.SetBool("Ground", isGrounded);
         anim.SetFloat("vSpeed", rb2d.velocity.y);
         anim.SetFloat("Speed", Mathf.Abs(moveInput.x));
