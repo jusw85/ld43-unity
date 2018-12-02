@@ -38,6 +38,8 @@ GameObject:
   - component: {fileID: 50543981847106688}
   - component: {fileID: 58258191330196702}
   - component: {fileID: 114000013796989676}
+  - component: {fileID: 114396468073011982}
+  - component: {fileID: 61896596836212966}
   m_Layer: 10
   m_Name: Turret
   m_TagString: Untagged
@@ -52,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013014412690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.76, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000013276687540}
@@ -107,6 +109,31 @@ CircleCollider2D:
   m_Offset: {x: 0.08, y: -0.07}
   serializedVersion: 2
   m_Radius: 0.17
+--- !u!61 &61896596836212966
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013014412690}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.041413844, y: 0.0165658}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.73333585, y: 0.74990106}
+  m_EdgeRadius: 0
 --- !u!114 &114000013796989676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,6 +148,17 @@ MonoBehaviour:
   projectile: {fileID: 1000010489749646, guid: 81e978d48184af54ab8aff100563a58e, type: 2}
   speedFactor: 2
   Delay: 2
+--- !u!114 &114396468073011982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013014412690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc2a41b9a063a144bec9b6879bd9c11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000013331287564
 SpriteRenderer:
   m_ObjectHideFlags: 1

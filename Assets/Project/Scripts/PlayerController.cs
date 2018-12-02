@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb2d;
     private AudioManager audioManager;
+    private List<IActivator> activatables;
 
     [System.NonSerialized]
     public SpawnPointController spawnPoint;
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        activatables = new List<IActivator>();
     }
 
     private void Start()
@@ -67,6 +70,32 @@ public class PlayerController : MonoBehaviour
                 toJump = true;
                 audioManager.PlaySound("Jump");
             }
+        }
+
+        if (Input.GetButtonDown("Fire"))
+        {
+            foreach (IActivator ia in activatables)
+            {
+                ia.Activate();
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D c2d)
+    {
+        IActivator ia = c2d.GetComponent<IActivator>();
+        if (ia != null)
+        {
+            activatables.Add(ia);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D c2d)
+    {
+        IActivator ia = c2d.GetComponent<IActivator>();
+        if (ia != null)
+        {
+            activatables.Remove(ia);
         }
     }
 
