@@ -130,6 +130,8 @@ public class PlayerController : MonoBehaviour
             anim.Play("Death");
             oldVel = rb2d.velocity;
             Destroy(rb2d);
+            GetComponent<CircleCollider2D>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
@@ -144,8 +146,8 @@ public class PlayerController : MonoBehaviour
 
         if (splatter != null)
         {
-            Instantiate(splatter, transform.position, Quaternion.identity);
-            splatter.transform.localScale = transform.localScale;
+            var obj = Instantiate(splatter, transform.position, Quaternion.identity);
+            obj.transform.localScale = transform.localScale;
         }
 
         if (xylemStick != null)
