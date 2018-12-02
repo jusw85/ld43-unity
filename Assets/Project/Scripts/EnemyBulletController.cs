@@ -32,7 +32,7 @@ public class EnemyBulletController : MonoBehaviour
     private void UpdateRb2d()
     {
 //        rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
-        rb2d.angularVelocity = rotationSpeed;
+//        rb2d.angularVelocity = rotationSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

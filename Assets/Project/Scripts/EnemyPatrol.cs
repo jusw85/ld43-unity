@@ -40,13 +40,13 @@ public class EnemyPatrol : MonoBehaviour
 
         if (facingRight)
         {
-            transform.localScale = new Vector3(1f, 1f, 0f);
+            transform.localScale = new Vector3(1f, 1f, 1f);
             rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y);
         }
 
         if (!facingRight)
         {
-            transform.localScale = new Vector3(-1f, 1f, 0f);
+            transform.localScale = new Vector3(-1f, 1f, 1f);
             rb2d.velocity = new Vector2(-moveSpeed, rb2d.velocity.y);
         }
     }
