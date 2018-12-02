@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     public GameObject xylemStick;
 
+    public bool enableXylemPhysics;
+    public float xylemVelocityMultiplier = 5.0f;
+
     private Vector2 moveInput;
     private bool toJump;
     private bool isGrounded;
@@ -118,12 +121,16 @@ public class PlayerController : MonoBehaviour
     }
 
     private Vector2 oldVel;
+
     public void Death()
     {
-        isDying = true;
-        anim.Play("Death");
-        oldVel = rb2d.velocity;
-        Destroy(rb2d);
+        if (!isDying)
+        {
+            isDying = true;
+            anim.Play("Death");
+            oldVel = rb2d.velocity;
+            Destroy(rb2d);
+        }
     }
 
     public GameObject splatter;
@@ -144,10 +151,18 @@ public class PlayerController : MonoBehaviour
         if (xylemStick != null)
         {
             var xylem = Instantiate(xylemStick, transform.position, Quaternion.identity);
-            var vel = new Vector2(oldVel.x, -oldVel.y);
-            vel.Normalize();
-            vel *= 5;
-            xylem.GetComponent<Rigidbody2D>().velocity = vel;
+            if (enableXylemPhysics)
+            {
+                var vel = new Vector2(oldVel.x, -oldVel.y);
+                vel.Normalize();
+                vel *= xylemVelocityMultiplier;
+                xylem.GetComponent<Rigidbody2D>().velocity = vel;
+            }
+            else
+            {
+                xylem.GetComponent<Rigidbody2D>().constraints =
+                    RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            }
         }
 
         Destroy(gameObject);
