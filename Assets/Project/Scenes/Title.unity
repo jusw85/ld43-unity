@@ -703,8 +703,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2003264490}
-  selectedCommands:
-  - {fileID: 2003264503}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -821,7 +820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 369
+    x: 370.2658
     y: 257
     width: 120
     height: 40
@@ -1010,7 +1009,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &2003264503
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2003264487}
