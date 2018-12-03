@@ -35,7 +35,7 @@ public class LightSwitch : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (target == null) return;
-        if (other.tag.Equals("Player") || other.tag.Equals("Pallet"))
+        if (other.tag.Equals("Player") || other.tag.Equals("Pallet") || other.tag.Equals("PlayerHitBox"))
         {
 //            target.Activate();
             anim.Play("Charge");
