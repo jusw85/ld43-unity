@@ -48,7 +48,16 @@ public class LightSwitch : MonoBehaviour
         if (other.tag.Equals("Player") || other.tag.Equals("Pallet"))
         {
             target.Deactivate();
-            anim.Play("Off");
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("On") ||
+                anim.GetCurrentAnimatorStateInfo(0).IsName("OnLoop"))
+            {
+                anim.SetTrigger("Uncharge");
+            }
+            else
+            {
+                anim.Play("Off");
+            }
         }
     }
 
