@@ -57,7 +57,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             instance = this;
-            source = GetComponents<AudioSource>()[0];
+            source = GetComponents<AudioSource>()[1];
         }
     }
 
@@ -87,5 +87,12 @@ public class AudioManager : MonoBehaviour
 
         // no sound with _name
         Debug.LogWarning("AudioManager: Sound not found in list, " + _name);
+    }
+
+    public void PlayBGM(AudioClip ac)
+    {
+        source.clip = ac;
+        source.loop = false;
+        source.Play();
     }
 }
