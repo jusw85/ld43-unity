@@ -5,10 +5,12 @@ public class LightSwitch : MonoBehaviour
 {
     public int targetId;
     private IActivatable target;
+    private Animator anim;
 
     private void Start()
     {
         SearchActivatables();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -31,15 +33,17 @@ public class LightSwitch : MonoBehaviour
         if (other.tag.Equals("Player") || other.tag.Equals("Pallet"))
         {
             target.Activate();
+            anim.Play("On");
         }
     }
-    
+
     public void OnTriggerExit2D(Collider2D other)
     {
         if (target == null) return;
         if (other.tag.Equals("Player") || other.tag.Equals("Pallet"))
         {
             target.Deactivate();
+            anim.Play("Off");
         }
     }
 

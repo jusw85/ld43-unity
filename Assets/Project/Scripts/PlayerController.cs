@@ -131,8 +131,8 @@ public class PlayerController : MonoBehaviour
             anim.Play("Death");
             oldVel = rb2d.velocity;
             Destroy(rb2d);
-            GetComponent<CircleCollider2D>().enabled = false;
-            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponentInChildren<CircleCollider2D>().enabled = false;
+            GetComponentInChildren<BoxCollider2D>().enabled = false;
         }
     }
 

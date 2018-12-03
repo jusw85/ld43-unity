@@ -19,6 +19,7 @@ TagManager:
   - Terrain
   - Boss2_BombSpawn
   - Boss3
+  - PlayerHitbox
   layers:
   - Default
   - TransparentFX
