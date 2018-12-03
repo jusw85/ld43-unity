@@ -56,8 +56,6 @@ GameObject:
   - component: {fileID: 124348176239670396}
   - component: {fileID: 81427021576595228}
   - component: {fileID: 114623108104838250}
-  - component: {fileID: 114356084440325876}
-  - component: {fileID: 114262204852167930}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -228,40 +226,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114262204852167930
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1616547477280904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f5bf2209eefd484aa730955c29e1fee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCam: {fileID: 0}
---- !u!114 &114356084440325876
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1616547477280904}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd6d4281e5d7cd44d8c6e38bc2c1b8d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 0
-  intensity: 0.036
-  chromaticAberration: 0.2
-  axialAberration: 0.5
-  blur: 0
-  blurSpread: 0.75
-  luminanceDependency: 0.25
-  blurDistance: 2.5
-  vignetteShader: {fileID: 0}
-  separableBlurShader: {fileID: 0}
-  chromAberrationShader: {fileID: 0}
 --- !u!114 &114516717920491300
 MonoBehaviour:
   m_ObjectHideFlags: 1

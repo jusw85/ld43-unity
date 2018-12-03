@@ -8,6 +8,12 @@ public class ActivateDoor : MonoBehaviour, IActivatable
     private bool activated;
     private Vector3 initialPos;
     private Vector3 nextPos;
+    private Collider2D c2d;
+
+    private void Awake()
+    {
+        c2d = GetComponent<Collider2D>();
+    }
 
     private void Start()
     {
@@ -27,13 +33,15 @@ public class ActivateDoor : MonoBehaviour, IActivatable
     public void Activate()
     {
         activated = true;
-        transform.position = nextPos;
+//        transform.position = nextPos;
+        c2d.enabled = false;
     }
 
     public void Deactivate()
     {
         activated = false;
-        transform.position = initialPos;
+//        transform.position = initialPos;
+        c2d.enabled = true;
     }
 
     public void ToggleActivate()
@@ -43,12 +51,14 @@ public class ActivateDoor : MonoBehaviour, IActivatable
         if (activated)
         {
 //            transform.Translate(0, -3, 0);
-            transform.position = nextPos;
+//            transform.position = nextPos;
+            Activate();
         }
         else
         {
 //            transform.Translate(0, 3, 0);
-            transform.position = initialPos;
+//            transform.position = initialPos;
+            Deactivate();
         }
     }
 

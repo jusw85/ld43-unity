@@ -74,11 +74,11 @@ public class TiledImporter : ICustomTiledImporter
             if (spawnType != null)
             {
                 var spawnedObject = SpawnGeneric(spawnType, gameObject);
-//                if (spawnType.Equals("Powerup"))
-//                {
-//                    var powerup = customProperties["powerup"];
-//                    spawnedObject.GetComponent<PowerupController>().powerup = powerup;
-//                }
+                if (spawnType.Equals("LevelTransition"))
+                {
+                    var level = customProperties["level"];
+                    spawnedObject.GetComponent<LevelTransition>().nextSceneName = level;
+                }
             }
         }
     }
