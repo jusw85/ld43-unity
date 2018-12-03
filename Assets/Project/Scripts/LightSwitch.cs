@@ -27,13 +27,18 @@ public class LightSwitch : MonoBehaviour
         return targetId;
     }
 
+    public void Activate()
+    {
+        target.Activate();
+    }
+
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (target == null) return;
         if (other.tag.Equals("Player") || other.tag.Equals("Pallet"))
         {
-            target.Activate();
-            anim.Play("On");
+//            target.Activate();
+            anim.Play("Charge");
         }
     }
 
