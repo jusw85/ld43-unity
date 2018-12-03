@@ -7,7 +7,7 @@ public class Ending : MonoBehaviour
     public AudioClip ac;
     private void Start()
     {
-        Camera.main.transform.position = Vector3.zero;
+        Camera.main.transform.position = new Vector3(0, 0, -10f);
         AudioManager.instance.PlayBGM(ac);
     }
 
