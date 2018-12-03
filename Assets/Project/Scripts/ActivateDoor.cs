@@ -9,10 +9,12 @@ public class ActivateDoor : MonoBehaviour, IActivatable
     private Vector3 initialPos;
     private Vector3 nextPos;
     private Collider2D c2d;
+    private Animator anim;
 
     private void Awake()
     {
         c2d = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Start()
@@ -35,6 +37,7 @@ public class ActivateDoor : MonoBehaviour, IActivatable
         activated = true;
 //        transform.position = nextPos;
         c2d.enabled = false;
+        anim.Play("Opening", -1, 0f);
     }
 
     public void Deactivate()
@@ -42,6 +45,10 @@ public class ActivateDoor : MonoBehaviour, IActivatable
         activated = false;
 //        transform.position = initialPos;
         c2d.enabled = true;
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Opening"))
+        {
+            anim.Play("Closing");
+        }
     }
 
     public void ToggleActivate()
