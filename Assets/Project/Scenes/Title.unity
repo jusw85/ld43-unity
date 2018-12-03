@@ -667,6 +667,9 @@ GameObject:
   - component: {fileID: 2003264502}
   - component: {fileID: 2003264500}
   - component: {fileID: 2003264501}
+  - component: {fileID: 2003264505}
+  - component: {fileID: 2003264504}
+  - component: {fileID: 2003264503}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -700,7 +703,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 2003264490}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 2003264503}
   variables: []
   description: 
   stepPause: 0
@@ -761,6 +765,9 @@ MonoBehaviour:
   - {fileID: 2003264498}
   - {fileID: 2003264497}
   - {fileID: 2003264499}
+  - {fileID: 2003264505}
+  - {fileID: 2003264504}
+  - {fileID: 2003264503}
 --- !u!114 &2003264491
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -941,7 +948,7 @@ MonoBehaviour:
   callMode: 2
 --- !u!114 &2003264500
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2003264487}
@@ -959,7 +966,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &2003264501
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2003264487}
@@ -985,7 +992,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &2003264502
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2003264487}
@@ -1001,6 +1008,64 @@ MonoBehaviour:
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
+--- !u!114 &2003264503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003264487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 15
+  indentLevel: 0
+  duration: 1
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+--- !u!114 &2003264504
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003264487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 776562362}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &2003264505
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2003264487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 502406302}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
 --- !u!1 &2084172994
 GameObject:
   m_ObjectHideFlags: 0
