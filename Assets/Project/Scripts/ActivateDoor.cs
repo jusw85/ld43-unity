@@ -45,7 +45,8 @@ public class ActivateDoor : MonoBehaviour, IActivatable
         activated = false;
 //        transform.position = initialPos;
         c2d.enabled = true;
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Opening"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Opening") ||
+            anim.GetCurrentAnimatorStateInfo(0).IsName("Opened"))
         {
             anim.Play("Closing");
         }
