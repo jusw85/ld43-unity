@@ -32,19 +32,27 @@ public class LightSwitch : MonoBehaviour
         target.Activate();
     }
 
+    private bool permOpen = false;
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (target == null) return;
+        if (permOpen) return;
         if (other.tag.Equals("Player") || other.tag.Equals("Pallet") || other.tag.Equals("PlayerHitbox"))
         {
 //            target.Activate();
             anim.Play("Charge");
+        }
+
+        if (other.tag.Equals("Pallet"))
+        {
+            permOpen = true;
         }
     }
 
     public void OnTriggerExit2D(Collider2D other)
     {
         if (target == null) return;
+        if (permOpen) return;
         if (other.tag.Equals("Player") || other.tag.Equals("Pallet") || other.tag.Equals("PlayerHitbox"))
         {
             target.Deactivate();
