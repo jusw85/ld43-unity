@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb2d;
     private AudioManager audioManager;
-    private List<IActivator> activators;
+    private HashSet<IActivator> activators;
 
     [System.NonSerialized]
     public SpawnPointController spawnPoint;
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
-        activators = new List<IActivator>();
+        activators = new HashSet<IActivator>();
     }
 
     private void Start()
@@ -116,6 +116,7 @@ public class PlayerController : MonoBehaviour
         IActivator ia = c2d.GetComponent<IActivator>();
         if (ia != null)
         {
+            
             activators.Remove(ia);
         }
     }

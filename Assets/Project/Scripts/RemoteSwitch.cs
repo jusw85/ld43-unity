@@ -5,6 +5,12 @@ public class RemoteSwitch : MonoBehaviour, IActivator
 {
     public int targetId;
     private IActivatable target;
+    private Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void Start()
     {
@@ -27,6 +33,7 @@ public class RemoteSwitch : MonoBehaviour, IActivator
 
     public void Activate()
     {
+        anim.SetTrigger("activate");
         if (target != null)
         {
             target.ToggleActivate();
