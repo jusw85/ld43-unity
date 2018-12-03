@@ -153,7 +153,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1387457445521594}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243543473723809178, guid: a197947b00f68544683359ad413d51c5,
     type: 2}
@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357c8488c11ef3741bb2618c516f8255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfx: {fileID: 243543473723809178, guid: a197947b00f68544683359ad413d51c5, type: 2}
   sounds:
   - name: Respawn
     clip: {fileID: 8300000, guid: 2c11de1bc62d9654ca9d8f6fd7e330b4, type: 3}
