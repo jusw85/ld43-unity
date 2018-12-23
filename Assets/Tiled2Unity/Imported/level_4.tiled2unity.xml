@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 12/3/2018 10:39:35 PM-->
+<!--Last exported: 12/23/2018 12:50:03 PM-->
 <Tiled2Unity version="1.0.12.4">
   <AssignMaterial mesh="level_4_mesh_0001" material="slime-bck" />
   <AssignMaterial mesh="level_4_mesh_0002" material="background_2" />
@@ -25,14 +25,6 @@
   <AssignMaterial mesh="level_4_mesh_0020" material="slime_end_vats" />
   <AssignMaterial mesh="level_4_mesh_0021" material="slime_end_vats" />
   <AssignMaterial mesh="level_4_mesh_0022" material="slime_end_vats" />
-  <AssignMaterial mesh="level_4_mesh_0023" material="slime_end_vats" />
-  <AssignMaterial mesh="level_4_mesh_0024" material="slime_end_vats" />
-  <AssignMaterial mesh="level_4_mesh_0025" material="slime_end_vats" />
-  <AssignMaterial mesh="level_4_mesh_0026" material="slime_end_vats" />
-  <AssignMaterial mesh="level_4_mesh_0027" material="slime_end_vats" />
-  <AssignMaterial mesh="level_4_mesh_0028" material="slime_end_vats" />
-  <AssignMaterial mesh="level_4_mesh_0029" material="slime_end_vats" />
-  <AssignMaterial mesh="level_4_mesh_0030" material="slime_end_vats" />
   <Prefab name="level_4" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="6" numTilesWide="74" numTilesHigh="36" tileWidth="32" tileHeight="32" exportScale="0.015625" mapWidthInPixels="2368" mapHeightInPixels="1152" backgroundColor="#808080">
     <GameObject name="Background3" x="0" y="0" z="0">
       <TileLayer offsetX="0" offsetY="0" />
@@ -72,53 +64,29 @@
       <GameObject name="slime_end_vats[700-800][800]" mesh="level_4_mesh_0014" sortingLayerName="" sortingOrder="2" opacity="1">
         <TileAnimator startTimeMs="700" durationMs="100" fullTimeMs="800" />
       </GameObject>
-      <GameObject name="slime_end_vats[0-100][1600]" mesh="level_4_mesh_0015" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="0" durationMs="100" fullTimeMs="1600" />
+      <GameObject name="slime_end_vats[0-100][800]" mesh="level_4_mesh_0015" sortingLayerName="" sortingOrder="2" opacity="1">
+        <TileAnimator startTimeMs="0" durationMs="100" fullTimeMs="800" />
       </GameObject>
-      <GameObject name="slime_end_vats[100-200][1600]" mesh="level_4_mesh_0016" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="100" durationMs="100" fullTimeMs="1600" />
+      <GameObject name="slime_end_vats[100-200][800]" mesh="level_4_mesh_0016" sortingLayerName="" sortingOrder="2" opacity="1">
+        <TileAnimator startTimeMs="100" durationMs="100" fullTimeMs="800" />
       </GameObject>
-      <GameObject name="slime_end_vats[200-300][1600]" mesh="level_4_mesh_0017" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="200" durationMs="100" fullTimeMs="1600" />
+      <GameObject name="slime_end_vats[200-300][800]" mesh="level_4_mesh_0017" sortingLayerName="" sortingOrder="2" opacity="1">
+        <TileAnimator startTimeMs="200" durationMs="100" fullTimeMs="800" />
       </GameObject>
-      <GameObject name="slime_end_vats[300-400][1600]" mesh="level_4_mesh_0018" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="300" durationMs="100" fullTimeMs="1600" />
+      <GameObject name="slime_end_vats[300-400][800]" mesh="level_4_mesh_0018" sortingLayerName="" sortingOrder="2" opacity="1">
+        <TileAnimator startTimeMs="300" durationMs="100" fullTimeMs="800" />
       </GameObject>
-      <GameObject name="slime_end_vats[400-500][1600]" mesh="level_4_mesh_0019" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="400" durationMs="100" fullTimeMs="1600" />
+      <GameObject name="slime_end_vats[400-500][800]" mesh="level_4_mesh_0019" sortingLayerName="" sortingOrder="2" opacity="1">
+        <TileAnimator startTimeMs="400" durationMs="100" fullTimeMs="800" />
       </GameObject>
-      <GameObject name="slime_end_vats[500-600][1600]" mesh="level_4_mesh_0020" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="500" durationMs="100" fullTimeMs="1600" />
+      <GameObject name="slime_end_vats[500-600][800]" mesh="level_4_mesh_0020" sortingLayerName="" sortingOrder="2" opacity="1">
+        <TileAnimator startTimeMs="500" durationMs="100" fullTimeMs="800" />
       </GameObject>
-      <GameObject name="slime_end_vats[600-700][1600]" mesh="level_4_mesh_0021" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="600" durationMs="100" fullTimeMs="1600" />
+      <GameObject name="slime_end_vats[600-700][800]" mesh="level_4_mesh_0021" sortingLayerName="" sortingOrder="2" opacity="1">
+        <TileAnimator startTimeMs="600" durationMs="100" fullTimeMs="800" />
       </GameObject>
-      <GameObject name="slime_end_vats[700-800][1600]" mesh="level_4_mesh_0022" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="700" durationMs="100" fullTimeMs="1600" />
-      </GameObject>
-      <GameObject name="slime_end_vats[800-900][1600]" mesh="level_4_mesh_0023" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="800" durationMs="100" fullTimeMs="1600" />
-      </GameObject>
-      <GameObject name="slime_end_vats[900-1000][1600]" mesh="level_4_mesh_0024" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="900" durationMs="100" fullTimeMs="1600" />
-      </GameObject>
-      <GameObject name="slime_end_vats[1000-1100][1600]" mesh="level_4_mesh_0025" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="1000" durationMs="100" fullTimeMs="1600" />
-      </GameObject>
-      <GameObject name="slime_end_vats[1100-1200][1600]" mesh="level_4_mesh_0026" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="1100" durationMs="100" fullTimeMs="1600" />
-      </GameObject>
-      <GameObject name="slime_end_vats[1200-1300][1600]" mesh="level_4_mesh_0027" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="1200" durationMs="100" fullTimeMs="1600" />
-      </GameObject>
-      <GameObject name="slime_end_vats[1300-1400][1600]" mesh="level_4_mesh_0028" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="1300" durationMs="100" fullTimeMs="1600" />
-      </GameObject>
-      <GameObject name="slime_end_vats[1400-1500][1600]" mesh="level_4_mesh_0029" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="1400" durationMs="100" fullTimeMs="1600" />
-      </GameObject>
-      <GameObject name="slime_end_vats[1500-1600][1600]" mesh="level_4_mesh_0030" sortingLayerName="" sortingOrder="2" opacity="1">
-        <TileAnimator startTimeMs="1500" durationMs="100" fullTimeMs="1600" />
+      <GameObject name="slime_end_vats[700-800][800]" mesh="level_4_mesh_0022" sortingLayerName="" sortingOrder="2" opacity="1">
+        <TileAnimator startTimeMs="700" durationMs="100" fullTimeMs="800" />
       </GameObject>
     </GameObject>
     <GameObject name="Objects" x="0" y="0" z="0">
@@ -168,14 +136,6 @@
   <ImportMesh filename="level_4_mesh_0020.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2xldmVsXzRfbWVzaF8wMDIwLm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTEzIC03LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNSAtNS41IDANCnYgLTEzIC01LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNyAtNy41IDANCnYgLTE3IC01LjUgMA0KdiAtMTUgLTUuNSAwDQp2IC0xOSAtNy41IDANCnYgLTIxIC03LjUgMA0KdiAtMjEgLTUuNSAwDQp2IC0xOSAtNS41IDANCnYgLTIxIC03LjUgMA0KdiAtMjMgLTcuNSAwDQp2IC0yMyAtNS41IDANCnYgLTIxIC01LjUgMA0KdiAtMiAtMTYgMA0KdiAtNCAtMTYgMA0KdiAtNCAtMTQgMA0KdiAtMiAtMTQgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwLjYyNSAwLjMzMzMzMzMNCnZ0IDAuNzUgMC4zMzMzMzMzDQp2dCAwLjc1IDAuNjY2NjY2Ng0KdnQgMC42MjUgMC42NjY2NjY2DQoNCiMgTm9ybWFsDQp2biAwIDAgLTENCg0KIyBNZXNoIGRlc2NyaXB0aW9uDQpnIGxldmVsXzRfbWVzaF8wMDIwDQoNCiMgRmFjZXMNCmYgMS8xLzEgMi8yLzEgMy8zLzEgNC80LzEKZiA1LzEvMSA2LzIvMSA3LzMvMSA4LzQvMQpmIDkvMS8xIDEwLzIvMSAxMS8zLzEgMTIvNC8xCmYgMTMvMS8xIDE0LzIvMSAxNS8zLzEgMTYvNC8xCmYgMTcvMS8xIDE4LzIvMSAxOS8zLzEgMjAvNC8xCg0K</ImportMesh>
   <ImportMesh filename="level_4_mesh_0021.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2xldmVsXzRfbWVzaF8wMDIxLm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTEzIC03LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNSAtNS41IDANCnYgLTEzIC01LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNyAtNy41IDANCnYgLTE3IC01LjUgMA0KdiAtMTUgLTUuNSAwDQp2IC0xOSAtNy41IDANCnYgLTIxIC03LjUgMA0KdiAtMjEgLTUuNSAwDQp2IC0xOSAtNS41IDANCnYgLTIxIC03LjUgMA0KdiAtMjMgLTcuNSAwDQp2IC0yMyAtNS41IDANCnYgLTIxIC01LjUgMA0KdiAtMiAtMTYgMA0KdiAtNCAtMTYgMA0KdiAtNCAtMTQgMA0KdiAtMiAtMTQgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwLjc1IDAuMzMzMzMzMw0KdnQgMC44NzUgMC4zMzMzMzMzDQp2dCAwLjg3NSAwLjY2NjY2NjYNCnZ0IDAuNzUgMC42NjY2NjY2DQoNCiMgTm9ybWFsDQp2biAwIDAgLTENCg0KIyBNZXNoIGRlc2NyaXB0aW9uDQpnIGxldmVsXzRfbWVzaF8wMDIxDQoNCiMgRmFjZXMNCmYgMS8xLzEgMi8yLzEgMy8zLzEgNC80LzEKZiA1LzEvMSA2LzIvMSA3LzMvMSA4LzQvMQpmIDkvMS8xIDEwLzIvMSAxMS8zLzEgMTIvNC8xCmYgMTMvMS8xIDE0LzIvMSAxNS8zLzEgMTYvNC8xCmYgMTcvMS8xIDE4LzIvMSAxOS8zLzEgMjAvNC8xCg0K</ImportMesh>
   <ImportMesh filename="level_4_mesh_0022.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2xldmVsXzRfbWVzaF8wMDIyLm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTEzIC03LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNSAtNS41IDANCnYgLTEzIC01LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNyAtNy41IDANCnYgLTE3IC01LjUgMA0KdiAtMTUgLTUuNSAwDQp2IC0xOSAtNy41IDANCnYgLTIxIC03LjUgMA0KdiAtMjEgLTUuNSAwDQp2IC0xOSAtNS41IDANCnYgLTIxIC03LjUgMA0KdiAtMjMgLTcuNSAwDQp2IC0yMyAtNS41IDANCnYgLTIxIC01LjUgMA0KdiAtMiAtMTYgMA0KdiAtNCAtMTYgMA0KdiAtNCAtMTQgMA0KdiAtMiAtMTQgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwLjg3NSAwLjMzMzMzMzMNCnZ0IDEgMC4zMzMzMzMzDQp2dCAxIDAuNjY2NjY2Ng0KdnQgMC44NzUgMC42NjY2NjY2DQoNCiMgTm9ybWFsDQp2biAwIDAgLTENCg0KIyBNZXNoIGRlc2NyaXB0aW9uDQpnIGxldmVsXzRfbWVzaF8wMDIyDQoNCiMgRmFjZXMNCmYgMS8xLzEgMi8yLzEgMy8zLzEgNC80LzEKZiA1LzEvMSA2LzIvMSA3LzMvMSA4LzQvMQpmIDkvMS8xIDEwLzIvMSAxMS8zLzEgMTIvNC8xCmYgMTMvMS8xIDE0LzIvMSAxNS8zLzEgMTYvNC8xCmYgMTcvMS8xIDE4LzIvMSAxOS8zLzEgMjAvNC8xCg0K</ImportMesh>
-  <ImportMesh filename="level_4_mesh_0023.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2xldmVsXzRfbWVzaF8wMDIzLm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTEzIC03LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNSAtNS41IDANCnYgLTEzIC01LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNyAtNy41IDANCnYgLTE3IC01LjUgMA0KdiAtMTUgLTUuNSAwDQp2IC0xOSAtNy41IDANCnYgLTIxIC03LjUgMA0KdiAtMjEgLTUuNSAwDQp2IC0xOSAtNS41IDANCnYgLTIxIC03LjUgMA0KdiAtMjMgLTcuNSAwDQp2IC0yMyAtNS41IDANCnYgLTIxIC01LjUgMA0KdiAtMiAtMTYgMA0KdiAtNCAtMTYgMA0KdiAtNCAtMTQgMA0KdiAtMiAtMTQgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwIDANCnZ0IDAuMTI1IDANCnZ0IDAuMTI1IDAuMzMzMzMzMw0KdnQgMCAwLjMzMzMzMzMNCg0KIyBOb3JtYWwNCnZuIDAgMCAtMQ0KDQojIE1lc2ggZGVzY3JpcHRpb24NCmcgbGV2ZWxfNF9tZXNoXzAwMjMNCg0KIyBGYWNlcw0KZiAxLzEvMSAyLzIvMSAzLzMvMSA0LzQvMQpmIDUvMS8xIDYvMi8xIDcvMy8xIDgvNC8xCmYgOS8xLzEgMTAvMi8xIDExLzMvMSAxMi80LzEKZiAxMy8xLzEgMTQvMi8xIDE1LzMvMSAxNi80LzEKZiAxNy8xLzEgMTgvMi8xIDE5LzMvMSAyMC80LzEKDQo=</ImportMesh>
-  <ImportMesh filename="level_4_mesh_0024.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2xldmVsXzRfbWVzaF8wMDI0Lm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTEzIC03LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNSAtNS41IDANCnYgLTEzIC01LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNyAtNy41IDANCnYgLTE3IC01LjUgMA0KdiAtMTUgLTUuNSAwDQp2IC0xOSAtNy41IDANCnYgLTIxIC03LjUgMA0KdiAtMjEgLTUuNSAwDQp2IC0xOSAtNS41IDANCnYgLTIxIC03LjUgMA0KdiAtMjMgLTcuNSAwDQp2IC0yMyAtNS41IDANCnYgLTIxIC01LjUgMA0KdiAtMiAtMTYgMA0KdiAtNCAtMTYgMA0KdiAtNCAtMTQgMA0KdiAtMiAtMTQgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwLjEyNSAwDQp2dCAwLjI1IDANCnZ0IDAuMjUgMC4zMzMzMzMzDQp2dCAwLjEyNSAwLjMzMzMzMzMNCg0KIyBOb3JtYWwNCnZuIDAgMCAtMQ0KDQojIE1lc2ggZGVzY3JpcHRpb24NCmcgbGV2ZWxfNF9tZXNoXzAwMjQNCg0KIyBGYWNlcw0KZiAxLzEvMSAyLzIvMSAzLzMvMSA0LzQvMQpmIDUvMS8xIDYvMi8xIDcvMy8xIDgvNC8xCmYgOS8xLzEgMTAvMi8xIDExLzMvMSAxMi80LzEKZiAxMy8xLzEgMTQvMi8xIDE1LzMvMSAxNi80LzEKZiAxNy8xLzEgMTgvMi8xIDE5LzMvMSAyMC80LzEKDQo=</ImportMesh>
-  <ImportMesh filename="level_4_mesh_0025.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2xldmVsXzRfbWVzaF8wMDI1Lm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTEzIC03LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNSAtNS41IDANCnYgLTEzIC01LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNyAtNy41IDANCnYgLTE3IC01LjUgMA0KdiAtMTUgLTUuNSAwDQp2IC0xOSAtNy41IDANCnYgLTIxIC03LjUgMA0KdiAtMjEgLTUuNSAwDQp2IC0xOSAtNS41IDANCnYgLTIxIC03LjUgMA0KdiAtMjMgLTcuNSAwDQp2IC0yMyAtNS41IDANCnYgLTIxIC01LjUgMA0KdiAtMiAtMTYgMA0KdiAtNCAtMTYgMA0KdiAtNCAtMTQgMA0KdiAtMiAtMTQgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwLjI1IDANCnZ0IDAuMzc1IDANCnZ0IDAuMzc1IDAuMzMzMzMzMw0KdnQgMC4yNSAwLjMzMzMzMzMNCg0KIyBOb3JtYWwNCnZuIDAgMCAtMQ0KDQojIE1lc2ggZGVzY3JpcHRpb24NCmcgbGV2ZWxfNF9tZXNoXzAwMjUNCg0KIyBGYWNlcw0KZiAxLzEvMSAyLzIvMSAzLzMvMSA0LzQvMQpmIDUvMS8xIDYvMi8xIDcvMy8xIDgvNC8xCmYgOS8xLzEgMTAvMi8xIDExLzMvMSAxMi80LzEKZiAxMy8xLzEgMTQvMi8xIDE1LzMvMSAxNi80LzEKZiAxNy8xLzEgMTgvMi8xIDE5LzMvMSAyMC80LzEKDQo=</ImportMesh>
-  <ImportMesh filename="level_4_mesh_0026.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2xldmVsXzRfbWVzaF8wMDI2Lm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTEzIC03LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNSAtNS41IDANCnYgLTEzIC01LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNyAtNy41IDANCnYgLTE3IC01LjUgMA0KdiAtMTUgLTUuNSAwDQp2IC0xOSAtNy41IDANCnYgLTIxIC03LjUgMA0KdiAtMjEgLTUuNSAwDQp2IC0xOSAtNS41IDANCnYgLTIxIC03LjUgMA0KdiAtMjMgLTcuNSAwDQp2IC0yMyAtNS41IDANCnYgLTIxIC01LjUgMA0KdiAtMiAtMTYgMA0KdiAtNCAtMTYgMA0KdiAtNCAtMTQgMA0KdiAtMiAtMTQgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwLjM3NSAwDQp2dCAwLjUgMA0KdnQgMC41IDAuMzMzMzMzMw0KdnQgMC4zNzUgMC4zMzMzMzMzDQoNCiMgTm9ybWFsDQp2biAwIDAgLTENCg0KIyBNZXNoIGRlc2NyaXB0aW9uDQpnIGxldmVsXzRfbWVzaF8wMDI2DQoNCiMgRmFjZXMNCmYgMS8xLzEgMi8yLzEgMy8zLzEgNC80LzEKZiA1LzEvMSA2LzIvMSA3LzMvMSA4LzQvMQpmIDkvMS8xIDEwLzIvMSAxMS8zLzEgMTIvNC8xCmYgMTMvMS8xIDE0LzIvMSAxNS8zLzEgMTYvNC8xCmYgMTcvMS8xIDE4LzIvMSAxOS8zLzEgMjAvNC8xCg0K</ImportMesh>
-  <ImportMesh filename="level_4_mesh_0027.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2xldmVsXzRfbWVzaF8wMDI3Lm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTEzIC03LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNSAtNS41IDANCnYgLTEzIC01LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNyAtNy41IDANCnYgLTE3IC01LjUgMA0KdiAtMTUgLTUuNSAwDQp2IC0xOSAtNy41IDANCnYgLTIxIC03LjUgMA0KdiAtMjEgLTUuNSAwDQp2IC0xOSAtNS41IDANCnYgLTIxIC03LjUgMA0KdiAtMjMgLTcuNSAwDQp2IC0yMyAtNS41IDANCnYgLTIxIC01LjUgMA0KdiAtMiAtMTYgMA0KdiAtNCAtMTYgMA0KdiAtNCAtMTQgMA0KdiAtMiAtMTQgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwLjUgMA0KdnQgMC42MjUgMA0KdnQgMC42MjUgMC4zMzMzMzMzDQp2dCAwLjUgMC4zMzMzMzMzDQoNCiMgTm9ybWFsDQp2biAwIDAgLTENCg0KIyBNZXNoIGRlc2NyaXB0aW9uDQpnIGxldmVsXzRfbWVzaF8wMDI3DQoNCiMgRmFjZXMNCmYgMS8xLzEgMi8yLzEgMy8zLzEgNC80LzEKZiA1LzEvMSA2LzIvMSA3LzMvMSA4LzQvMQpmIDkvMS8xIDEwLzIvMSAxMS8zLzEgMTIvNC8xCmYgMTMvMS8xIDE0LzIvMSAxNS8zLzEgMTYvNC8xCmYgMTcvMS8xIDE4LzIvMSAxOS8zLzEgMjAvNC8xCg0K</ImportMesh>
-  <ImportMesh filename="level_4_mesh_0028.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2xldmVsXzRfbWVzaF8wMDI4Lm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTEzIC03LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNSAtNS41IDANCnYgLTEzIC01LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNyAtNy41IDANCnYgLTE3IC01LjUgMA0KdiAtMTUgLTUuNSAwDQp2IC0xOSAtNy41IDANCnYgLTIxIC03LjUgMA0KdiAtMjEgLTUuNSAwDQp2IC0xOSAtNS41IDANCnYgLTIxIC03LjUgMA0KdiAtMjMgLTcuNSAwDQp2IC0yMyAtNS41IDANCnYgLTIxIC01LjUgMA0KdiAtMiAtMTYgMA0KdiAtNCAtMTYgMA0KdiAtNCAtMTQgMA0KdiAtMiAtMTQgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwLjYyNSAwDQp2dCAwLjc1IDANCnZ0IDAuNzUgMC4zMzMzMzMzDQp2dCAwLjYyNSAwLjMzMzMzMzMNCg0KIyBOb3JtYWwNCnZuIDAgMCAtMQ0KDQojIE1lc2ggZGVzY3JpcHRpb24NCmcgbGV2ZWxfNF9tZXNoXzAwMjgNCg0KIyBGYWNlcw0KZiAxLzEvMSAyLzIvMSAzLzMvMSA0LzQvMQpmIDUvMS8xIDYvMi8xIDcvMy8xIDgvNC8xCmYgOS8xLzEgMTAvMi8xIDExLzMvMSAxMi80LzEKZiAxMy8xLzEgMTQvMi8xIDE1LzMvMSAxNi80LzEKZiAxNy8xLzEgMTgvMi8xIDE5LzMvMSAyMC80LzEKDQo=</ImportMesh>
-  <ImportMesh filename="level_4_mesh_0029.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2xldmVsXzRfbWVzaF8wMDI5Lm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTEzIC03LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNSAtNS41IDANCnYgLTEzIC01LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNyAtNy41IDANCnYgLTE3IC01LjUgMA0KdiAtMTUgLTUuNSAwDQp2IC0xOSAtNy41IDANCnYgLTIxIC03LjUgMA0KdiAtMjEgLTUuNSAwDQp2IC0xOSAtNS41IDANCnYgLTIxIC03LjUgMA0KdiAtMjMgLTcuNSAwDQp2IC0yMyAtNS41IDANCnYgLTIxIC01LjUgMA0KdiAtMiAtMTYgMA0KdiAtNCAtMTYgMA0KdiAtNCAtMTQgMA0KdiAtMiAtMTQgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwLjc1IDANCnZ0IDAuODc1IDANCnZ0IDAuODc1IDAuMzMzMzMzMw0KdnQgMC43NSAwLjMzMzMzMzMNCg0KIyBOb3JtYWwNCnZuIDAgMCAtMQ0KDQojIE1lc2ggZGVzY3JpcHRpb24NCmcgbGV2ZWxfNF9tZXNoXzAwMjkNCg0KIyBGYWNlcw0KZiAxLzEvMSAyLzIvMSAzLzMvMSA0LzQvMQpmIDUvMS8xIDYvMi8xIDcvMy8xIDgvNC8xCmYgOS8xLzEgMTAvMi8xIDExLzMvMSAxMi80LzEKZiAxMy8xLzEgMTQvMi8xIDE1LzMvMSAxNi80LzEKZiAxNy8xLzEgMTgvMi8xIDE5LzMvMSAyMC80LzEKDQo=</ImportMesh>
-  <ImportMesh filename="level_4_mesh_0030.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ2xldmVsXzRfbWVzaF8wMDMwLm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAyMCkNCnYgLTEzIC03LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNSAtNS41IDANCnYgLTEzIC01LjUgMA0KdiAtMTUgLTcuNSAwDQp2IC0xNyAtNy41IDANCnYgLTE3IC01LjUgMA0KdiAtMTUgLTUuNSAwDQp2IC0xOSAtNy41IDANCnYgLTIxIC03LjUgMA0KdiAtMjEgLTUuNSAwDQp2IC0xOSAtNS41IDANCnYgLTIxIC03LjUgMA0KdiAtMjMgLTcuNSAwDQp2IC0yMyAtNS41IDANCnYgLTIxIC01LjUgMA0KdiAtMiAtMTYgMA0KdiAtNCAtMTYgMA0KdiAtNCAtMTQgMA0KdiAtMiAtMTQgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwLjg3NSAwDQp2dCAxIDANCnZ0IDEgMC4zMzMzMzMzDQp2dCAwLjg3NSAwLjMzMzMzMzMNCg0KIyBOb3JtYWwNCnZuIDAgMCAtMQ0KDQojIE1lc2ggZGVzY3JpcHRpb24NCmcgbGV2ZWxfNF9tZXNoXzAwMzANCg0KIyBGYWNlcw0KZiAxLzEvMSAyLzIvMSAzLzMvMSA0LzQvMQpmIDUvMS8xIDYvMi8xIDcvMy8xIDgvNC8xCmYgOS8xLzEgMTAvMi8xIDExLzMvMSAxMi80LzEKZiAxMy8xLzEgMTQvMi8xIDE1LzMvMSAxNi80LzEKZiAxNy8xLzEgMTgvMi8xIDE5LzMvMSAyMC80LzEKDQo=</ImportMesh>
   <InternalTexture assetPath="Assets/Project/TiledMap/spritesheets/slime-bck.png" materialName="slime-bck" />
   <InternalTexture assetPath="Assets/Project/TiledMap/spritesheets/background_2.png" materialName="background_2" />
   <InternalTexture assetPath="Assets/Project/TiledMap/spritesheets/slime-block.png" materialName="slime-block" />

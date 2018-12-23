@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 12/3/2018 8:42:38 PM-->
+<!--Last exported: 12/23/2018 12:44:22 PM-->
 <Tiled2Unity version="1.0.12.4">
   <AssignMaterial mesh="level_3_mesh_0001" material="slime-block" />
   <AssignMaterial mesh="level_3_mesh_0002" material="background_2" />
@@ -90,7 +90,7 @@
           <Path>27.5,-2.5 27,-2.5 27,-3.5 27.5,-3.5</Path>
           <Path>4.5,-4 2.5,-4 2.5,-4.5 4.5,-4.5</Path>
           <Path>16.5,-6.5 15.5,-6.5 15.5,-7 16.5,-7</Path>
-          <Path>7.5,-6.5 7,-6.5 7,-7.5 7.5,-7.5</Path>
+          <Path>7.5,-7 7,-7 7,-7.5 7.5,-7.5</Path>
           <Path>3.5,-8 3,-8 3,-8.5 3.5,-8.5</Path>
           <Path>31.5,-8.5 30,-8.5 30,-9 31.5,-9</Path>
           <Path>3,-8.5 2.5,-8.5 2.5,-9 3,-9</Path>
@@ -123,19 +123,24 @@
         <RectangleObjectComponent tmx-object-id="77" tmx-object-name="Spawn Point" tmx-object-type="" tmx-object-x="160" tmx-object-y="192" tmx-object-width="32" tmx-object-height="32" tmx-object-rotation="0" />
         <BoxCollider2D width="0.5" height="0.5" />
       </GameObject>
-      <GameObject name="Turret" x="8.4375" y="-3.494797" rotation="0" scaleX="1" scaleY="1">
-        <Property name="type" value="Turret" />
-        <TileObjectComponent tmx-object-id="119" tmx-object-name="Turret" tmx-object-type="" tmx-object-x="540" tmx-object-y="223.667" tmx-object-width="64" tmx-object-height="64" tmx-object-rotation="0" tmx-tile-flip-horizontal="false" tmx-tile-flip-vertical="false" width="1" height="1" />
-        <GameObject name="TileObject" x="0.5" y="0.5" scaleX="1" scaleY="1" />
-      </GameObject>
       <GameObject name="Patroller" x="28.28125" y="-3.5" rotation="0" scaleX="1" scaleY="1">
         <Property name="type" value="Patroller" />
         <TileObjectComponent tmx-object-id="121" tmx-object-name="Patroller" tmx-object-type="" tmx-object-x="1810" tmx-object-y="224" tmx-object-width="64" tmx-object-height="64" tmx-object-rotation="0" tmx-tile-flip-horizontal="false" tmx-tile-flip-vertical="false" width="1" height="1" />
         <GameObject name="TileObject" x="0.5" y="0.5" scaleX="1" scaleY="1" />
       </GameObject>
-      <GameObject name="Turret" x="8.416672" y="-5.01042175" rotation="0" scaleX="1" scaleY="1">
+      <GameObject name="Turret" x="9.5" y="-3.51823449" rotation="0" scaleX="1" scaleY="1">
         <Property name="type" value="Turret" />
-        <TileObjectComponent tmx-object-id="123" tmx-object-name="Turret" tmx-object-type="" tmx-object-x="538.667" tmx-object-y="320.667" tmx-object-width="64" tmx-object-height="64" tmx-object-rotation="0" tmx-tile-flip-horizontal="false" tmx-tile-flip-vertical="false" width="1" height="1" />
+        <TileObjectComponent tmx-object-id="119" tmx-object-name="Turret" tmx-object-type="" tmx-object-x="608" tmx-object-y="225.167" tmx-object-width="64" tmx-object-height="64" tmx-object-rotation="0" tmx-tile-flip-horizontal="false" tmx-tile-flip-vertical="false" width="1" height="1" />
+        <GameObject name="TileObject" x="0.5" y="0.5" scaleX="1" scaleY="1" />
+      </GameObject>
+      <GameObject name="Turret" x="9.518234" y="-5.01823425" rotation="0" scaleX="1" scaleY="1">
+        <Property name="type" value="Turret" />
+        <TileObjectComponent tmx-object-id="123" tmx-object-name="Turret" tmx-object-type="" tmx-object-x="609.167" tmx-object-y="321.167" tmx-object-width="64" tmx-object-height="64" tmx-object-rotation="0" tmx-tile-flip-horizontal="false" tmx-tile-flip-vertical="false" width="1" height="1" />
+        <GameObject name="TileObject" x="0.5" y="0.5" scaleX="1" scaleY="1" />
+      </GameObject>
+      <GameObject name="Turret" x="31.734375" y="-5.4921875" rotation="0" scaleX="1" scaleY="1">
+        <Property name="type" value="Turret" />
+        <TileObjectComponent tmx-object-id="113" tmx-object-name="Turret" tmx-object-type="" tmx-object-x="2031" tmx-object-y="351.5" tmx-object-width="64" tmx-object-height="64" tmx-object-rotation="0" tmx-tile-flip-horizontal="false" tmx-tile-flip-vertical="false" width="1" height="1" />
         <GameObject name="TileObject" x="0.5" y="0.5" scaleX="1" scaleY="1" />
       </GameObject>
       <GameObject name="Turret" x="24.765625" y="-5.5" rotation="0" scaleX="1" scaleY="1">
@@ -151,11 +156,6 @@
       <GameObject name="Patroller" x="3.375" y="-6" rotation="0" scaleX="1" scaleY="1">
         <Property name="type" value="Patroller" />
         <TileObjectComponent tmx-object-id="105" tmx-object-name="Patroller" tmx-object-type="" tmx-object-x="216" tmx-object-y="384" tmx-object-width="64" tmx-object-height="64" tmx-object-rotation="0" tmx-tile-flip-horizontal="false" tmx-tile-flip-vertical="false" width="1" height="1" />
-        <GameObject name="TileObject" x="0.5" y="0.5" scaleX="1" scaleY="1" />
-      </GameObject>
-      <GameObject name="Turret" x="33.5" y="-7.015625" rotation="0" scaleX="1" scaleY="1">
-        <Property name="type" value="Turret" />
-        <TileObjectComponent tmx-object-id="113" tmx-object-name="Turret" tmx-object-type="" tmx-object-x="2144" tmx-object-y="449" tmx-object-width="64" tmx-object-height="64" tmx-object-rotation="0" tmx-tile-flip-horizontal="false" tmx-tile-flip-vertical="false" width="1" height="1" />
         <GameObject name="TileObject" x="0.5" y="0.5" scaleX="1" scaleY="1" />
       </GameObject>
       <GameObject name="Patroller" x="24.015625" y="-8.96875" rotation="0" scaleX="1" scaleY="1">
