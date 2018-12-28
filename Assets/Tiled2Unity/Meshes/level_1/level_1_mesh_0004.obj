@@ -8,10 +8,10 @@ v -5 -4 0
 v -3 -4 0
 
 # Texture cooridinates (Count = 4)
-vt 0.25 0
-vt 0.375 0
-vt 0.375 1
-vt 0.25 1
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
 
 # Normal
 vn 0 0 -1
