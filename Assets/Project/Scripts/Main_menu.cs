@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Main_menu : MonoBehaviour {
 
@@ -9,12 +10,12 @@ public class Main_menu : MonoBehaviour {
 
 	public void NewGame()
 	{
-		Application.LoadLevel (startLevel);
+		SceneManager.LoadScene (startLevel);
 	}
 
 	public void LevelSelect()
 	{
-		Application.LoadLevel (levelSelect);
+		SceneManager.LoadScene (levelSelect);
 	}
 
 	public void QuitGame()
