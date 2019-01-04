@@ -994,11 +994,6 @@ Prefab:
       propertyPath: m_Name
       value: LevelTransition (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114790149664526532, guid: 56a215afa0be3f747bdd05b99e47de22,
-        type: 2}
-      propertyPath: nextSceneName
-      value: Ending
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56a215afa0be3f747bdd05b99e47de22, type: 2}
   m_IsPrefabParent: 0
@@ -1102,11 +1097,6 @@ Prefab:
     - target: {fileID: 4271990095397594, guid: 56a215afa0be3f747bdd05b99e47de22, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114790149664526532, guid: 56a215afa0be3f747bdd05b99e47de22,
-        type: 2}
-      propertyPath: nextSceneName
-      value: Ending
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56a215afa0be3f747bdd05b99e47de22, type: 2}
