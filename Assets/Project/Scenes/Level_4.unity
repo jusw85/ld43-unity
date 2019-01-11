@@ -453,7 +453,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 687187140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 284.5, y: 160, z: 0}
+  m_LocalPosition: {x: 475.5, y: 267.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -993,6 +993,11 @@ Prefab:
     - target: {fileID: 1327585014738240, guid: 56a215afa0be3f747bdd05b99e47de22, type: 2}
       propertyPath: m_Name
       value: LevelTransition (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114790149664526532, guid: 56a215afa0be3f747bdd05b99e47de22,
+        type: 2}
+      propertyPath: nextSceneName
+      value: Ending_Surface
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56a215afa0be3f747bdd05b99e47de22, type: 2}
