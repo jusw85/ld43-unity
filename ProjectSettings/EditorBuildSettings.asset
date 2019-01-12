@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/Ending_lab.unity
     guid: e46d1e423d1375047bfd2d75d09ebfdd
+  - enabled: 1
+    path: Assets/Project/Scenes/Ending_Surface.unity
+    guid: 8e4786006f2b96f4788c51c6de667638
