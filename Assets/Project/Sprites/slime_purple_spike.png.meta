@@ -1,83 +1,225 @@
 fileFormatVersion: 2
 guid: d20cba1e60924dd4fb2ae7ae03bf38d9
-timeCreated: 1543855237
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: slime_purple_spike_0
-    21300002: slime_purple_spike_1
-    21300004: slime_purple_spike_2
-    21300006: slime_purple_spike_3
-    21300008: slime_purple_spike_4
-    21300010: slime_purple_spike_5
-    21300012: slime_purple_spike_6
-    21300014: slime_purple_spike_7
-    21300016: slime_purple_spike_8
-    21300018: slime_purple_spike_9
-    21300020: slime_purple_spike_10
-    21300022: slime_purple_spike_11
-    21300024: slime_purple_spike_12
-    21300026: slime_purple_spike_13
-    21300028: slime_purple_spike_14
-    21300030: slime_purple_spike_15
-    21300032: slime_purple_spike_16
-    21300034: slime_purple_spike_17
-    21300036: slime_purple_spike_18
-    21300038: slime_purple_spike_19
-    21300040: slime_purple_spike_20
-    21300042: slime_purple_spike_21
-    21300044: slime_purple_spike_22
-    21300046: slime_purple_spike_23
-    21300048: slime_purple_spike_24
-    21300050: slime_purple_spike_25
-    21300052: slime_purple_spike_26
-    21300054: slime_purple_spike_27
-    21300056: slime_purple_spike_28
-    21300058: slime_purple_spike_29
-    21300060: slime_purple_spike_30
-    21300062: slime_purple_spike_31
-    21300064: slime_purple_spike_32
-    21300066: slime_purple_spike_33
-    21300068: slime_purple_spike_34
-    21300070: slime_purple_spike_35
-    21300072: slime_purple_spike_36
-    21300074: slime_purple_spike_37
-    21300076: slime_purple_spike_38
-    21300078: slime_purple_spike_39
-    21300080: slime_purple_spike_40
-    21300082: slime_purple_spike_41
-    21300084: slime_purple_spike_42
-    21300086: slime_purple_spike_43
-    21300088: slime_purple_spike_44
-    21300090: slime_purple_spike_45
-    21300092: slime_purple_spike_46
-    21300094: slime_purple_spike_47
-    21300096: slime_purple_spike_48
-    21300098: slime_purple_spike_49
-    21300100: slime_purple_spike_50
-    21300102: slime_purple_spike_51
-    21300104: slime_purple_spike_52
-    21300106: slime_purple_spike_53
-    21300108: slime_purple_spike_54
-    21300110: slime_purple_spike_55
-    21300112: slime_purple_spike_56
-    21300114: slime_purple_spike_57
-    21300116: slime_purple_spike_58
-    21300118: slime_purple_spike_59
-    21300120: slime_purple_spike_60
-    21300122: slime_purple_spike_61
-    21300124: slime_purple_spike_62
-    21300126: slime_purple_spike_63
-    21300128: slime_purple_spike_64
-    21300130: slime_purple_spike_65
-    21300132: slime_purple_spike_66
-    21300134: slime_purple_spike_67
-    21300136: slime_purple_spike_68
-    21300138: slime_purple_spike_69
-    21300140: slime_purple_spike_70
-    21300142: slime_purple_spike_71
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: slime_purple_spike_0
+  - first:
+      213: 21300002
+    second: slime_purple_spike_1
+  - first:
+      213: 21300004
+    second: slime_purple_spike_2
+  - first:
+      213: 21300006
+    second: slime_purple_spike_3
+  - first:
+      213: 21300008
+    second: slime_purple_spike_4
+  - first:
+      213: 21300010
+    second: slime_purple_spike_5
+  - first:
+      213: 21300012
+    second: slime_purple_spike_6
+  - first:
+      213: 21300014
+    second: slime_purple_spike_7
+  - first:
+      213: 21300016
+    second: slime_purple_spike_8
+  - first:
+      213: 21300018
+    second: slime_purple_spike_9
+  - first:
+      213: 21300020
+    second: slime_purple_spike_10
+  - first:
+      213: 21300022
+    second: slime_purple_spike_11
+  - first:
+      213: 21300024
+    second: slime_purple_spike_12
+  - first:
+      213: 21300026
+    second: slime_purple_spike_13
+  - first:
+      213: 21300028
+    second: slime_purple_spike_14
+  - first:
+      213: 21300030
+    second: slime_purple_spike_15
+  - first:
+      213: 21300032
+    second: slime_purple_spike_16
+  - first:
+      213: 21300034
+    second: slime_purple_spike_17
+  - first:
+      213: 21300036
+    second: slime_purple_spike_18
+  - first:
+      213: 21300038
+    second: slime_purple_spike_19
+  - first:
+      213: 21300040
+    second: slime_purple_spike_20
+  - first:
+      213: 21300042
+    second: slime_purple_spike_21
+  - first:
+      213: 21300044
+    second: slime_purple_spike_22
+  - first:
+      213: 21300046
+    second: slime_purple_spike_23
+  - first:
+      213: 21300048
+    second: slime_purple_spike_24
+  - first:
+      213: 21300050
+    second: slime_purple_spike_25
+  - first:
+      213: 21300052
+    second: slime_purple_spike_26
+  - first:
+      213: 21300054
+    second: slime_purple_spike_27
+  - first:
+      213: 21300056
+    second: slime_purple_spike_28
+  - first:
+      213: 21300058
+    second: slime_purple_spike_29
+  - first:
+      213: 21300060
+    second: slime_purple_spike_30
+  - first:
+      213: 21300062
+    second: slime_purple_spike_31
+  - first:
+      213: 21300064
+    second: slime_purple_spike_32
+  - first:
+      213: 21300066
+    second: slime_purple_spike_33
+  - first:
+      213: 21300068
+    second: slime_purple_spike_34
+  - first:
+      213: 21300070
+    second: slime_purple_spike_35
+  - first:
+      213: 21300072
+    second: slime_purple_spike_36
+  - first:
+      213: 21300074
+    second: slime_purple_spike_37
+  - first:
+      213: 21300076
+    second: slime_purple_spike_38
+  - first:
+      213: 21300078
+    second: slime_purple_spike_39
+  - first:
+      213: 21300080
+    second: slime_purple_spike_40
+  - first:
+      213: 21300082
+    second: slime_purple_spike_41
+  - first:
+      213: 21300084
+    second: slime_purple_spike_42
+  - first:
+      213: 21300086
+    second: slime_purple_spike_43
+  - first:
+      213: 21300088
+    second: slime_purple_spike_44
+  - first:
+      213: 21300090
+    second: slime_purple_spike_45
+  - first:
+      213: 21300092
+    second: slime_purple_spike_46
+  - first:
+      213: 21300094
+    second: slime_purple_spike_47
+  - first:
+      213: 21300096
+    second: slime_purple_spike_48
+  - first:
+      213: 21300098
+    second: slime_purple_spike_49
+  - first:
+      213: 21300100
+    second: slime_purple_spike_50
+  - first:
+      213: 21300102
+    second: slime_purple_spike_51
+  - first:
+      213: 21300104
+    second: slime_purple_spike_52
+  - first:
+      213: 21300106
+    second: slime_purple_spike_53
+  - first:
+      213: 21300108
+    second: slime_purple_spike_54
+  - first:
+      213: 21300110
+    second: slime_purple_spike_55
+  - first:
+      213: 21300112
+    second: slime_purple_spike_56
+  - first:
+      213: 21300114
+    second: slime_purple_spike_57
+  - first:
+      213: 21300116
+    second: slime_purple_spike_58
+  - first:
+      213: 21300118
+    second: slime_purple_spike_59
+  - first:
+      213: 21300120
+    second: slime_purple_spike_60
+  - first:
+      213: 21300122
+    second: slime_purple_spike_61
+  - first:
+      213: 21300124
+    second: slime_purple_spike_62
+  - first:
+      213: 21300126
+    second: slime_purple_spike_63
+  - first:
+      213: 21300128
+    second: slime_purple_spike_64
+  - first:
+      213: 21300130
+    second: slime_purple_spike_65
+  - first:
+      213: 21300132
+    second: slime_purple_spike_66
+  - first:
+      213: 21300134
+    second: slime_purple_spike_67
+  - first:
+      213: 21300136
+    second: slime_purple_spike_68
+  - first:
+      213: 21300138
+    second: slime_purple_spike_69
+  - first:
+      213: 21300140
+    second: slime_purple_spike_70
+  - first:
+      213: 21300142
+    second: slime_purple_spike_71
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -95,6 +237,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -105,7 +249,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: 0
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -117,18 +261,21 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -137,7 +284,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -146,7 +296,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: iPhone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -155,7 +308,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Android
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -164,7 +320,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: WebGL
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -173,6 +332,8 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -190,6 +351,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_1
       rect:
@@ -204,6 +372,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_2
       rect:
@@ -218,6 +393,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_3
       rect:
@@ -232,6 +414,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_4
       rect:
@@ -246,6 +435,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_5
       rect:
@@ -260,6 +456,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_6
       rect:
@@ -274,6 +477,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_7
       rect:
@@ -288,6 +498,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_8
       rect:
@@ -302,6 +519,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_9
       rect:
@@ -316,6 +540,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_10
       rect:
@@ -330,6 +561,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_11
       rect:
@@ -344,6 +582,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_12
       rect:
@@ -358,6 +603,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_13
       rect:
@@ -372,6 +624,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_14
       rect:
@@ -386,6 +645,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: slime_purple_spike_15
       rect:
@@ -400,9 +666,26 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

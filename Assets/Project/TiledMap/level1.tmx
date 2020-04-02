@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="74" height="36" tilewidth="32" tileheight="32" nextobjectid="94">
- <tileset firstgid="1" name="BoundsTilesheet" tilewidth="32" tileheight="32" tilecount="16" columns="4">
-  <image source="spritesheets/bounds_tilesheet.png" width="128" height="128"/>
-  <tile id="1">
-   <objectgroup draworder="index">
-    <object id="1" x="0" y="0" width="32" height="32"/>
-   </objectgroup>
-  </tile>
-  <tile id="5">
-   <objectgroup draworder="index"/>
-  </tile>
-  <tile id="9">
-   <objectgroup draworder="index">
-    <object id="1" x="0" y="0" width="32" height="32"/>
-   </objectgroup>
-  </tile>
- </tileset>
- <layer name="Background" width="74" height="36">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="74" height="36" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="94">
+ <tileset firstgid="1" source="BoundsTilesheet.tsx"/>
+ <layer id="1" name="Background" width="74" height="36">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -56,7 +41,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Objects" width="74" height="36">
+ <layer id="2" name="Objects" width="74" height="36">
   <properties>
    <property name="unity:ignore" value="visual"/>
   </properties>
@@ -99,7 +84,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Solid" width="74" height="36">
+ <layer id="3" name="Solid" width="74" height="36">
   <properties>
    <property name="unity:ignore" value="visual"/>
    <property name="unity:layer" value="Solid"/>
@@ -143,7 +128,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Spikes" width="74" height="36">
+ <layer id="4" name="Spikes" width="74" height="36">
   <properties>
    <property name="unity:ignore" value="visual"/>
    <property name="unity:isTrigger" type="bool" value="true"/>
@@ -187,7 +172,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="MappedObjects">
+ <objectgroup id="5" name="MappedObjects">
   <object id="77" name="Spawn Point" x="160" y="192" width="32" height="32">
    <properties>
     <property name="type" value="SpawnPoint"/>
